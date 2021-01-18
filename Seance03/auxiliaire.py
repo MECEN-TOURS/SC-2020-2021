@@ -4,9 +4,6 @@ Module auxiliaire pour la résolution du problème de traversée.
 """
 from typing import Dict, List, Literal, Tuple
 
-COTES = ("Gauche", "Droite")
-PERSONNAGES = ("Berger", "Loup", "Mouton", "Choux")
-
 Cote = Literal["Gauche", "Droite"]
 Personnage = Literal["Berger", "Loup", "Mouton", "Choux"]
 Etat = Dict[Personnage, Cote]
@@ -14,27 +11,48 @@ Chemin = List[Etat]
 Arrete = Tuple[Etat, Etat]
 Graphe = Tuple[List[Etat], List[Arrete]]
 
-DEPART = {
+COTES: Tuple[Cote, Cote] = ("Gauche", "Droite")
+PERSONNAGES: Tuple[Personnage, Personnage, Personnage, Personnage] = ("Berger", "Loup", "Mouton", "Choux")
+
+DEPART: Etat = {
     "Berger": "Gauche", 
     "Loup": "Gauche", 
     "Mouton": "Gauche", 
-    "Chou": "Gauche"
+    "Choux": "Gauche"
 }
-ARRIVEE = {
+ARRIVEE: Etat = {
     "Berger": "Droite", 
     "Loup": "Droite", 
     "Mouton": "Droite", 
-    "Chou": "Droite"
+    "Choux": "Droite"
 }
 
 
 def est_interdit(etat: Etat) -> bool:
-    """Fonction implémentant la rèble Loup/Mouton Mouton/Chou."""
+    """Fonction implémentant la règle Loup/Mouton Mouton/Chou."""
     if etat["Loup"] == etat["Mouton"] and etat["Loup"] != etat["Berger"]:
         return True
-    if etat["Mouton"] == etat["Chou"] and etat["Mouton"] != etat["Berger"]:
+    if etat["Mouton"] == etat["Choux"] and etat["Mouton"] != etat["Berger"]:
         return True
     return False
+
+assert not est_interdit(DEPART)
+assert est_interdit(
+    {
+        "Berger": "Gauche", 
+        "Loup": "Droite", 
+        "Mouton": "Droite", 
+        "Choux": "Gauche"   
+    }
+)
+assert est_interdit(
+    {
+        "Berger": "Gauche", 
+        "Loup": "Gauche", 
+        "Mouton": "Droite", 
+        "Choux": "Droite"   
+    }
+)
 
 
 def sont_connectes(etat_depart: Etat, etat_arrivee: Etat) -> bool:
@@ -42,7 +60,7 @@ def sont_connectes(etat_depart: Etat, etat_arrivee: Etat) -> bool:
     if etat_depart["Berger"] == etat_arrivee["Berger"]:
         return False
     nombre_de_changements = 0
-    for personnage in ("Loup", "Mouton", "Chou"):
+    for personnage in ("Loup", "Mouton", "Choux"):
         if etat_depart[personnage] != etat_arrivee[personnage]:
             nombre_de_changements = nombre_de_changements + 1
     if nombre_de_changements < 2:
@@ -50,7 +68,51 @@ def sont_connectes(etat_depart: Etat, etat_arrivee: Etat) -> bool:
     else:
         return False
 
+assert sont_connectes(
+    etat_depart={
+        "Berger": "Gauche", 
+        "Loup": "Gauche", 
+        "Mouton": "Droite", 
+        "Choux": "Droite"   
+    },
+    etat_arrivee={
+        "Berger": "Droite", 
+        "Loup": "Gauche", 
+        "Mouton": "Droite", 
+        "Choux": "Droite"   
+    }
+)
+assert sont_connectes(
+    etat_depart={
+        "Berger": "Gauche", 
+        "Loup": "Gauche", 
+        "Mouton": "Droite", 
+        "Choux": "Droite"   
+    },
+    etat_arrivee={
+        "Berger": "Droite", 
+        "Loup": "Droite", 
+        "Mouton": "Droite", 
+        "Choux": "Droite"   
+    }
+)
+assert not sont_connectes(
+    etat_depart={
+        "Berger": "Gauche", 
+        "Loup": "Gauche", 
+        "Mouton": "Droite", 
+        "Choux": "Droite"   
+    },
+    etat_arrivee={
+        "Berger": "Droite", 
+        "Loup": "Gauche", 
+        "Mouton": "Gauche", 
+        "Choux": "Droite"   
+    }
+)
 
+    
+    
 def genere_etats() -> List[Etat]:
     """Genere les etats correspondant au problème de la traversée."""
     resultat = list()
@@ -62,7 +124,7 @@ def genere_etats() -> List[Etat]:
                         "Berger": choix_berger,
                         "Loup": choix_loup,
                         "Mouton": choix_mouton,
-                        "Chou": choix_chou
+                        "Choux": choix_chou
                     }
                     resultat.append(etat)
     return resultat    
