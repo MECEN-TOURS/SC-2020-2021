@@ -29,7 +29,14 @@ ARRIVEE: Etat = {
 
 
 def est_interdit(etat: Etat) -> bool:
-    """Fonction implémentant la règle Loup/Mouton Mouton/Chou."""
+    """Fonction implémentant la règle Loup/Mouton Mouton/Chou.
+    
+    Exemples:
+>>> est_interdit({"Berger": "Gauche", "Loup": "Gauche", "Mouton": "Gauche", "Choux": "Gauche"})
+False
+>>> est_interdit({"Berger": "Gauche", "Loup": "Droite", "Mouton": "Droite", "Choux": "Gauche"})
+True
+    """
     if etat["Loup"] == etat["Mouton"] and etat["Loup"] != etat["Berger"]:
         return True
     if etat["Mouton"] == etat["Choux"] and etat["Mouton"] != etat["Berger"]:
@@ -56,15 +63,66 @@ assert est_interdit(
 
 
 def sont_connectes(etat_depart: Etat, etat_arrivee: Etat) -> bool:
-    """Décide si deux états forment une arrête."""
+    """Décide si deux états forment une arrête.
+    
+    Exemples:
+>>> sont_connectes(
+...     etat_depart={
+...         "Berger": "Gauche", 
+...         "Loup": "Gauche", 
+...         "Mouton": "Droite", 
+...         "Choux": "Droite"   
+...     },
+...     etat_arrivee={
+...         "Berger": "Droite", 
+...         "Loup": "Gauche", 
+...         "Mouton": "Droite", 
+...         "Choux": "Droite"   
+...     }
+... )
+True
+>>> sont_connectes(
+...     etat_depart={
+...         "Berger": "Gauche", 
+...         "Loup": "Gauche", 
+...         "Mouton": "Droite", 
+...         "Choux": "Droite"   
+...     },
+...     etat_arrivee={
+...         "Berger": "Droite", 
+...         "Loup": "Droite", 
+...         "Mouton": "Droite", 
+...         "Choux": "Droite"   
+...     }
+... )
+True
+>>> sont_connectes(
+...     etat_depart={
+...         "Berger": "Gauche", 
+...         "Loup": "Gauche", 
+...         "Mouton": "Droite", 
+...         "Choux": "Droite"   
+...     },
+...     etat_arrivee={
+...         "Berger": "Droite", 
+...         "Loup": "Gauche", 
+...         "Mouton": "Gauche", 
+...         "Choux": "Droite"   
+...     }
+... )
+False
+    """
     if etat_depart["Berger"] == etat_arrivee["Berger"]:
         return False
-    nombre_de_changements = 0
+    nombre_de_changements = 0 
     for personnage in ("Loup", "Mouton", "Choux"):
         if etat_depart[personnage] != etat_arrivee[personnage]:
             nombre_de_changements = nombre_de_changements + 1
-    if nombre_de_changements < 2:
+            personnage_changeant_de_cote = personnage
+    if nombre_de_changements == 0:
         return True
+    elif nombre_de_changements == 1:
+        return etat_depart["Berger"] == etat_depart[personnage_changeant_de_cote]
     else:
         return False
 
@@ -188,6 +246,18 @@ def est_absent(sommet_cherche: Etat, arretes: List[Arrete]) -> bool:
             return False
     return True
 
+assert not est_absent(
+    sommet_cherche="A",
+    arretes=[("A", "B"), ("B", "C"), ("C", "D")]
+)
+assert not est_absent(
+    sommet_cherche="A",
+    arretes=[("B", "C"), ("C", "D"), ("A", "B")]
+)
+assert est_absent(
+    sommet_cherche="D",
+    arretes=[("B", "C"), ("C", "D"), ("A", "B")]
+)
 
 def remonte_arbre(depart: Etat, arrivee: Etat, arbre: List[Arrete]) -> Chemin:
     """Génère un chemin entre depart et arrivee utilisant les arrêtes de l'arbre."""
@@ -202,6 +272,13 @@ def remonte_arbre(depart: Etat, arrivee: Etat, arbre: List[Arrete]) -> Chemin:
             
     sommets.append(noeud_courant)
     return list(reversed(sommets))
+
+assert remonte_arbre(
+    depart="D",
+    arrivee="A",
+    arbre=[("A", "B"), ("B", "C"), ("C", "D")]
+) == list("DCBA")
+
 
 
 def trouve_chemin(depart: Etat, arrivee: Etat, graphe: Graphe) -> Chemin:
