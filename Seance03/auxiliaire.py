@@ -2,7 +2,7 @@
 
 Module auxiliaire pour la résolution du problème de traversée.
 """
-from typing import Dict, List, Literal, Tuple
+from typing import Callable, Dict, List, Literal, Tuple
 
 Cote = Literal["Gauche", "Droite"]
 Personnage = Literal["Berger", "Loup", "Mouton", "Choux"]
@@ -11,16 +11,16 @@ Chemin = List[Etat]
 Arrete = Tuple[Etat, Etat]
 Graphe = Tuple[List[Etat], List[Arrete]]
 
-COTES: Tuple[Cote, Cote] = ("Gauche", "Droite")
-PERSONNAGES: Tuple[Personnage, Personnage, Personnage, Personnage] = ("Berger", "Loup", "Mouton", "Choux")
+COTES= ("Gauche", "Droite")
+PERSONNAGES = ("Berger", "Loup", "Mouton", "Choux")
 
-DEPART: Etat = {
+DEPART = {
     "Berger": "Gauche", 
     "Loup": "Gauche", 
     "Mouton": "Gauche", 
     "Choux": "Gauche"
 }
-ARRIVEE: Etat = {
+ARRIVEE = {
     "Berger": "Droite", 
     "Loup": "Droite", 
     "Mouton": "Droite", 
@@ -169,39 +169,54 @@ assert not sont_connectes(
     }
 )
 
-    
-    
-def genere_etats() -> List[Etat]:
+        
+def genere_etats(clefs: List[str], valeurs: List[str]) -> List[Etat]:
     """Genere les etats correspondant au problème de la traversée."""
-    resultat = list()
-    for choix_berger in COTES:
-        for choix_loup in COTES:
-            for choix_mouton in COTES:
-                for choix_chou in COTES:
-                    etat = {
-                        "Berger": choix_berger,
-                        "Loup": choix_loup,
-                        "Mouton": choix_mouton,
-                        "Choux": choix_chou
-                    }
-                    resultat.append(etat)
-    return resultat    
+    ... 
 
+assert genere_etats(clefs=["a", "b"], valeurs=[1, 2]) == [
+    {"a": 1, "b": 1},
+    {"a": 1, "b": 2},
+    {"a": 2, "b": 1},
+    {"a": 2, "b": 2},
+]
 
-def genere_graphe() -> Graphe:
+SOMMETS = genere_etats(clefs=PERSONNAGES, valeurs=COTES)
+
+def genere_graphe(sommets: List[Etat], contraintes=List[Callable]) -> Graphe:
     """Renvoie le graphe associé au problème."""
-    sommets = [etat for etat in genere_etats() if not est_interdit(etat)]
     fleches = [
         (etat1, etat2) 
         for etat1 in sommets 
         for etat2 in sommets 
-        if sont_connectes(etat1, etat2)
+        if all(contrainte(etat1, etat2) for contrainte in contraintes)
     ]
     return sommets, fleches
 
+GRAPHE = genere_graphe(sommets=SOMMETS, contraintes=[sont_connectes])
 
 def sont_relies(depart: Etat, arrivee: Etat, graphe: Graphe) -> bool:
-    """Décide si un chemin du graphe relie les deux états."""
+    """Décide si un chemin du graphe relie les deux états.
+Exemples:
+>>> sont_relies(
+...     depart="A", 
+...     arrivee="D", 
+...     graphe=(
+...         ["A", "B", "C", "D"], 
+...         [("A", "B"), ("A", "C"), ("C", "D")]
+...     )
+... )
+True
+>>> sont_relies(
+...     depart="A", 
+...     arrivee="D", 
+...     graphe=(
+...         ["A", "B", "C", "D"], 
+...         [("A", "B"), ("C", "D")]
+...     )
+... )
+False
+"""
     sommets, arretes = graphe
     deja_visites = list()
     a_visites = [depart]
@@ -240,7 +255,25 @@ assert not sont_relies(
 
 
 def est_absent(sommet_cherche: Etat, arretes: List[Arrete]) -> bool:
-    """Décide si le sommet apparaît comme origine d'une des arrêtes."""
+    """Décide si le sommet apparaît comme origine d'une des arrêtes.
+
+Exemples:
+>>> est_absent(
+...     sommet_cherche="A",
+...     arretes=[("A", "B"), ("B", "C"), ("C", "D")]
+... )
+False
+>>> est_absent(
+...     sommet_cherche="A",
+...     arretes=[("B", "C"), ("C", "D"), ("A", "B")]
+... )
+False
+>>> est_absent(
+...     sommet_cherche="D",
+...     arretes=[("B", "C"), ("C", "D"), ("A", "B")]
+... )
+True
+"""
     for sommet_1, sommet_2 in arretes:
         if sommet_1 == sommet_cherche:
             return False
@@ -260,7 +293,16 @@ assert est_absent(
 )
 
 def remonte_arbre(depart: Etat, arrivee: Etat, arbre: List[Arrete]) -> Chemin:
-    """Génère un chemin entre depart et arrivee utilisant les arrêtes de l'arbre."""
+    """Génère un chemin entre depart et arrivee utilisant les arrêtes de l'arbre.
+    
+Exemple:
+>>> remonte_arbre(
+...     depart="D",
+...     arrivee="A",
+...     arbre=[("A", "B"), ("B", "C"), ("C", "D")]
+... )
+['D', 'C', 'B', 'A']
+    """
     sommets = list()
     noeud_courant = arrivee
     while noeud_courant != depart:
@@ -284,7 +326,27 @@ assert remonte_arbre(
 def trouve_chemin(depart: Etat, arrivee: Etat, graphe: Graphe) -> Chemin:
     """Renvoie un chemin reliant depart et arrivee à travers le graphe.
     
-    Renvoie la liste vide si il n'existe pas de tel chemin.
+Renvoie la liste vide si il n'existe pas de tel chemin.
+
+Exemples:
+>>> trouve_chemin(
+...     depart="A", 
+...     arrivee="D", 
+...     graphe=(
+...         ["A", "B", "C", "D"], 
+...         [("A", "B"), ("A", "C"), ("C", "D")]
+...     )
+... )
+['A', 'C', 'D']
+>>> trouve_chemin(
+...     depart="A", 
+...     arrivee="D", 
+...     graphe=(
+...         ["A", "B", "C", "D"], 
+...         [("A", "B"), ("C", "D")]
+...     )
+... )
+[]
     """
     sommets, arretes = graphe
     deja_visites = list()
