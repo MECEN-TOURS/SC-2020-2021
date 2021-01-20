@@ -1,9 +1,11 @@
 # Introduction mathématiques aux graphes
 
+Pour une introduction en anglais très visuel aux graphes suivez [ce lien](https://d3gt.com/unit.html).
+
 ## Définition: Graphe Orienté
 
-Un graphe est un couple d'ensembles 
-$$(V, E)$$ 
+Un graphe est un couple d'ensembles
+$$(V, E)$$
 tels que
 $$E \subset V^2$$
 
@@ -22,7 +24,7 @@ $$\forall i \in \{1,...,n\},\qquad (e_{i-1}, e_i) \in A.$$
 On appelle $n$ la longueur du chemin.
 
 **Exemple**:
-Pour le graphe ci-dessus 
+Pour le graphe ci-dessus
 - $(1, 2, 3)$ est un chemin de longueur 2
 - $(1, 4)$ est un chemin de longueur 1
 - $(1, 2, 4)$ n'est pas un chemin car $(2, 4)\notin A$

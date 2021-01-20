@@ -1,7 +1,12 @@
+## Ressources
+
+- [Lien](https://www.idpoisson.fr/perrollaz/cours_python/PLAN.html) vers un cours général de python.
+- [Lien](https://www.idpoisson.fr/perrollaz/faq_python.html) vers une faq avec des tâches scientifiques en python.
+
 ## Outils
 
-- jupyterlab : 
-    1. notebook pour exploration et storytelling, 
+- jupyterlab :
+    1. notebook pour exploration et storytelling,
     2. éditeur pour librairies pendant la phase de nettoyage
     3. éditeur markdown pour des fichiers d'explication
     4. lecteur de csv
