@@ -1,6 +1,28 @@
 """Description.
 
 Module auxiliaire pour la résolution du problème de traversée.
+
+Variables globales:
+- COTES
+- PERSONNAGES
+- DEPART
+- ARRIVEE
+- SOMMETS
+- GRAPHE
+
+Fonctions:
+- est_valide
+- sont_connectes
+- genere_etats
+- genere_graphe
+- sont_relies
+- test_sont_relies
+- est_absent
+- test_est_absent
+- remonte_arbre
+- test_remonte_arbre
+- trouve_chemin
+- test_trouve_chemin
 """
 import copy
 from typing import Callable, Dict, List, Literal, Tuple, NewType
@@ -391,7 +413,7 @@ def remonte_arbre(depart: Etat, arrivee: Etat, arbre: List[Arrete]) -> Chemin:
     return Chemin(list(reversed(sommets)))
 
 
-def test_remonte_arbre():
+def test_remonte_arbre() -> bool:
     """Test sur trois cas particuliers la fonction."""
     a, b, c, d = GRAPHE[0][:4]
     resultat = remonte_arbre(
@@ -449,7 +471,7 @@ def trouve_chemin(depart: Etat, arrivee: Etat, graphe: Graphe) -> Chemin:
     return Chemin([])
 
 
-def test_trouve_chemin():
+def test_trouve_chemin() -> bool:
     """Test sur deux cas particuliers la fonction."""
     a, b, c, d = GRAPHE[0][:4]
     resultat1 = trouve_chemin(depart=a, arrivee=d, graphe=Graphe(([a,b,c,d], [Arrete((a,b)), Arrete((a, c)), Arrete((c, d))]))) == Chemin([a, c, d])
