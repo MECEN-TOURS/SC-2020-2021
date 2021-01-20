@@ -21,16 +21,34 @@ Etant donné un graphe $G=(S, A)$, on appelle chemin la donnée d'un entier $n\g
 $$\forall i \in \{1,...,n\},\qquad (e_{i-1}, e_i) \in A.$$
 On appelle $n$ la longueur du chemin.
 
-Exemple:
+**Exemple**:
 Pour le graphe ci-dessus 
 - $(1, 2, 3)$ est un chemin de longueur 2
 - $(1, 4)$ est un chemin de longueur 1
 - $(1, 2, 4)$ n'est pas un chemin car $(2, 4)\notin A$
+
+**Remarque**: on peut très bien avoir une arrête reliant un état à lui même!
 
 ## Définition: Graphe non orienté
 
 Soit $G=(S, A)$ un graphe orienté, on dira que $G$ est non orienté lorsque
 $$\forall (x,y)\in S^2,\qquad (x,y)\in A \Rightarrow (y, x) \in A.$$
 
-Exemple:
+**Exemple**:
 $$G= (\{A, B, C\}, \{(A,B), (B,A), (A, C), (C, A)\})$$
+
+![graphe2](./graphe2.svg)
+
+## Définition: Voisinage
+
+Soit $G=(S, A)$ un graphe, soit $s\in S$ un sommet. On appelle voisinage de $s$ l'ensemble
+$$\mathrm{Vois}(s):=\{e\in S\ : \ (s,e)\in A\}.$$
+
+**Exemples**:
+Pour le graphe
+$$G = (\{1, 2, 3, 4\}, \{(1, 2), (2, 3), (1, 4)\}).$$
+On a
+- $\mathrm{Vois}(1) = \{2, 4\}$
+- $\mathrm{Vois}(2) = \{3\}$
+- $\mathrm{Vois}(3) = \{\}$
+- $\mathrm{Vois}(4) = \{\}$
