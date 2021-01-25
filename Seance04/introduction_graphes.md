@@ -15,7 +15,7 @@ $$E \subset V^2$$
 
 Exemple:
 $$G = (\{1, 2, 3, 4\}, \{(1, 2), (2, 3), (1, 4)\}).$$
-![graphe1](./graphe1.svg)
+<center><img src="./graphe1.svg" width=300/></center>
 
 ## Définition: Chemin
 
@@ -39,7 +39,7 @@ $$\forall (x,y)\in S^2,\qquad (x,y)\in A \Rightarrow (y, x) \in A.$$
 **Exemple**:
 $$G= (\{A, B, C\}, \{(A,B), (B,A), (A, C), (C, A)\})$$
 
-![graphe2](./graphe2.svg)
+<center><img src="./graphe2.svg" width=300/></center>
 
 ## Définition: Voisinage
 
