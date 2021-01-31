@@ -9,7 +9,71 @@ Valeur = Union[int, str]
 
 
 class Grille:
-    """Implémente une grille de Sudoku 4x4."""
+    """Implémente une grille de Sudoku 4x4.
+
+        Exemples:
+    >>> Grille([1, 2, 3, 4, 3, 4, 1, 2, 2, 1, 4, 3, 4, 3, 2, 1])
+    Grille(cases=[1, 2, 3, 4, 3, 4, 1, 2, 2, 1, 4, 3, 4, 3, 2, 1])
+    >>> Grille.par_lignes(
+    ...     [
+    ...             [1, 2, 3, 4],
+    ...             [3, 4, 1, 2],
+    ...             [2, 1, 4, 3],
+    ...             [4, 3, 2, 1],
+    ...     ]
+    ... )
+    Grille(cases=[1, 2, 3, 4, 3, 4, 1, 2, 2, 1, 4, 3, 4, 3, 2, 1])
+    >>> Grille.par_str(
+    ... '''
+    ... 1234
+    ... 3412
+    ... 2143
+    ... 4321
+    ... '''
+    ... )
+    Grille(cases=[1, 2, 3, 4, 3, 4, 1, 2, 2, 1, 4, 3, 4, 3, 2, 1])
+    >>> print(Grille.par_str(
+    ...     "x234"
+    ...     "3x12"
+    ...     "21x3"
+    ...     "432x"
+    ... )
+    ... )
+
+    -----------------
+    | x | 2 | 3 | 4 |
+    -----------------
+    | 3 | x | 1 | 2 |
+    -----------------
+    | 2 | 1 | x | 3 |
+    -----------------
+    | 4 | 3 | 2 | x |
+    -----------------
+    >>> g = Grille.par_str(
+    ... '''
+    ... 1234
+    ... 3412
+    ... 2143
+    ... 4321
+    ... '''
+    ... )
+    >>> g.est_finale()
+    True
+    >>> g.est_valide()
+    True
+    >>> h = Grille.par_str(
+    ... '''
+    ... 1234
+    ... 2143
+    ... xxxx
+    ... xxxx
+    ... '''
+    ... )
+    >>> h.est_finale()
+    False
+    >>> h.est_valide()
+    False
+    """
 
     _valeurs: Set[Valeur] = set([1, 2, 3, 4, "x"])
 
@@ -193,7 +257,43 @@ def __genere_voisins(grille: Grille) -> List[Grille]:
 
 
 def genere_solutions(grille: Grille) -> Generator[Grille, None, None]:
-    """Renvoie un itérateur sur les solutions."""
+    """Renvoie un itérateur sur les solutions.
+
+        Exemple:
+    >>> g = Grille.par_str(
+    ... '''
+    ... 123x
+    ... 3412
+    ... x143
+    ... 4321
+    ... '''
+    ... )
+    >>> print(g)
+
+    -----------------
+    | 1 | 2 | 3 | x |
+    -----------------
+    | 3 | 4 | 1 | 2 |
+    -----------------
+    | x | 1 | 4 | 3 |
+    -----------------
+    | 4 | 3 | 2 | 1 |
+    -----------------
+
+    >>> for sol in genere_solutions(g):
+    ...     print(sol)
+    ...
+
+    -----------------
+    | 1 | 2 | 3 | 4 |
+    -----------------
+    | 3 | 4 | 1 | 2 |
+    -----------------
+    | 2 | 1 | 4 | 3 |
+    -----------------
+    | 4 | 3 | 2 | 1 |
+    -----------------
+    """
     if grille.est_valide():
         if grille.est_finale():
             yield grille
