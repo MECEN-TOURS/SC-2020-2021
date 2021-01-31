@@ -7,9 +7,9 @@ Tests de la bibliothèque auxiliaire.
 import pytest
 from auxiliaire import (
     Grille,
-    insere_valeur,
-    recupere_premier_x,
-    genere_voisins,
+    __insere_valeur,
+    __recupere_premier_x,
+    __genere_voisins,
     genere_solutions,
 )
 
@@ -420,7 +420,7 @@ def test_insere_valeur():
         ]
     )
     identification = id(essai)
-    nouvelle = insere_valeur(grille=essai, indice=0, valeur=4)
+    nouvelle = __insere_valeur(grille=essai, indice=0, valeur=4)
     assert identification != id(nouvelle)
     assert nouvelle[0] == 4
 
@@ -447,7 +447,7 @@ def test_recupere_premier_x():
             "x",
         ]
     )
-    sortie = recupere_premier_x(entree)
+    sortie = __recupere_premier_x(entree)
     attendu = 2
     assert attendu == sortie
 
@@ -456,7 +456,7 @@ def test_recupere_premier_x_vide():
     """Test génération exception avec absence de x."""
     entree = Grille([1, 2, 3, 4, 3, 4, 1, 2, 2, 1, 4, 3, 4, 3, 2, 1])
     with pytest.raises(ValueError):
-        _ = recupere_premier_x(entree)
+        _ = __recupere_premier_x(entree)
 
 
 def test_genere_voisins():
@@ -468,14 +468,14 @@ def test_genere_voisins():
         Grille([1, 2, 3, "x", "x", "x", 1, 2, 2, "x", "x", 3, "x", 3, 2, "x"]),
         Grille([1, 2, 4, "x", "x", "x", 1, 2, 2, "x", "x", 3, "x", 3, 2, "x"]),
     ]
-    sortie = genere_voisins(entree)
+    sortie = __genere_voisins(entree)
     assert attendu == sortie
 
 
 def test_genere_voisins_vide():
     """Teste une grille complète."""
     entree = Grille([1, 2, 3, 4, 3, 4, 1, 2, 2, 1, 4, 3, 4, 3, 2, 1])
-    sortie = genere_voisins(entree)
+    sortie = __genere_voisins(entree)
     attendu = list()
     assert sortie == attendu
 
