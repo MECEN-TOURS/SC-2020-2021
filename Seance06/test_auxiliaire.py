@@ -165,23 +165,27 @@ class Test_Grille:
 
     def test_par_str(self):
         """Test le constructeur par str."""
-        generee = Grille.par_str("""
+        generee = Grille.par_str(
+            """
 1234
 3412
 2143
 4321
-""")
+"""
+        )
         attendue = Grille([1, 2, 3, 4, 3, 4, 1, 2, 2, 1, 4, 3, 4, 3, 2, 1])
         assert attendue == generee
-        
+
     def test_par_str_x(self):
         """Test le constructeur par str avec cases vides."""
-        generee = Grille.par_str("""
+        generee = Grille.par_str(
+            """
 x234
 3x12
 21x3
 432x
-""")
+"""
+        )
         attendue = Grille(["x", 2, 3, 4, 3, "x", 1, 2, 2, 1, "x", 3, 4, 3, 2, "x"])
         assert attendue == generee
 
@@ -298,7 +302,7 @@ x234
                 "x",
             ]
         )
-        assert essai.verifie_lignes()
+        assert essai._verifie_lignes()
         essai = Grille(
             [
                 1,
@@ -319,7 +323,7 @@ x234
                 "x",
             ]
         )
-        assert not essai.verifie_lignes()
+        assert not essai._verifie_lignes()
 
     def test_verifie_colonnes(self):
         essai = Grille(
@@ -342,7 +346,7 @@ x234
                 "x",
             ]
         )
-        assert essai.verifie_colonnes()
+        assert essai._verifie_colonnes()
         essai = Grille(
             [
                 1,
@@ -363,32 +367,20 @@ x234
                 "x",
             ]
         )
-        assert not essai.verifie_lignes()
+        assert not essai._verifie_lignes()
 
     def test_verifie_carres(self):
-        essai = Grille(
-            [
-                1,
-                2,
-                "x",
-                "x",
-                "x",
-                "x",
-                1,
-                2,
-                2,
-                "x",
-                "x",
-                3,
-                "x",
-                3,
-                2,
-                "x",
-            ]
+        essai = Grille.par_str(
+            """
+12xx
+xx12
+2xx3
+x32x
+"""
         )
-        assert essai.verifie_carres()
+        assert essai._verifie_carres()
         essai = Grille([1, 2, 3, 4, 2, 1, 4, 3, 3, 4, 1, 2, 4, 3, 2, 1])
-        assert not essai.verifie_carres()
+        assert not essai._verifie_carres()
 
     def test_est_valide(self):
         essai = Grille([1, 2, 3, 4, 2, 1, 4, 3, 3, 4, 1, 2, 4, 3, 2, 1])

@@ -9,15 +9,15 @@ from copy import deepcopy
 class Grille:
     """Implémente une grille de Sudoku 4x4."""
 
-    valeurs = set([1, 2, 3, 4, "x"])
+    _valeurs = set([1, 2, 3, 4, "x"])
 
     def __init__(self, cases):
         """Initialise via une liste."""
-        if not all(case in self.valeurs for case in cases):
+        if not all(case in self._valeurs for case in cases):
             raise ValueError("Les seuls valeurs possibles sont 1 2 3 4 ou x")
         if len(cases) != 16:
             raise ValueError("Il faut fournir 16 valeurs.")
-        self.cases = cases
+        self._cases = cases
 
     @classmethod
     def par_lignes(cls, lignes):
@@ -28,14 +28,14 @@ class Grille:
     def par_str(cls, chaine: str):
         """Initialise en passant une chaine multiligne."""
         cases = [
-            cls.__transforme_car(caractere)
+            cls._transforme_car(caractere)
             for ligne in chaine.strip().splitlines()
             for caractere in ligne
         ]
         return cls(cases)
 
     @staticmethod
-    def __transforme_car(car):
+    def _transforme_car(car):
         try:
             return int(car)
         except ValueError:
@@ -43,7 +43,7 @@ class Grille:
 
     def __repr__(self):
         """Pour deboggage."""
-        return f"Grille(cases={self.cases})"
+        return f"Grille(cases={self._cases})"
 
     def __str__(self):
         """Pour inspection visuelle."""
@@ -58,16 +58,16 @@ class Grille:
 | {} | {} | {} | {} |
 -----------------
 """.format(
-            *self.cases
+            *self._cases
         )
 
     def __eq__(self, autre):
         """Egalité si memes cases."""
-        return self.cases == autre.cases
+        return self._cases == autre._cases
 
     def __iter__(self):
         """On itère sur de gauche à droite de haut en bas."""
-        return iter(self.cases)
+        return iter(self._cases)
 
     def __getitem__(self, indice):
         """On accède à la case voulue.
@@ -76,7 +76,7 @@ class Grille:
             -> self.__getitem__(indice)
             -> Grille.__getitem__(self, indice)
         """
-        return self.cases[indice]
+        return self._cases[indice]
 
     def __setitem__(self, indice, valeur):
         """On insère à la case voulue.
@@ -85,9 +85,9 @@ class Grille:
             -> self.__setitem__(indice, valeur)
             -> Grille.__setitem__(self, indice, valeur)
         """
-        self.cases[indice] = valeur
+        self._cases[indice] = valeur
 
-    def verifie_lignes(self):
+    def _verifie_lignes(self):
         """Vérifie que les valeurs ne sont présentes qu'au plus une fois par ligne."""
         for valeur in (1, 2, 3, 4):
             for i3 in (0, 1):
@@ -107,7 +107,7 @@ class Grille:
                         return False
             return True
 
-    def verifie_colonnes(self):
+    def _verifie_colonnes(self):
         """Vérifie que les valeurs ne sont présentes qu'au plus une fois par ligne."""
         for valeur in (1, 2, 3, 4):
             for i1 in (0, 1):
@@ -127,7 +127,7 @@ class Grille:
                         return False
             return True
 
-    def verifie_carres(self):
+    def _verifie_carres(self):
         """Vérifie que les valeurs ne sont présentes qu'au plus une fois par ligne."""
         for cible in (1, 2, 3, 4):
             for p3 in range(2):
@@ -147,7 +147,9 @@ class Grille:
     def est_valide(self):
         """Vérifie si la grille respecte les règles."""
         return (
-            self.verifie_lignes() and self.verifie_colonnes() and self.verifie_carres()
+            self._verifie_lignes()
+            and self._verifie_colonnes()
+            and self._verifie_carres()
         )
 
     def est_finale(self):
