@@ -18,6 +18,8 @@ class Graphe_v1:
         for depart, arrivee in self._arretes:
             if depart == sommet:
                 yield arrivee
+                
+    
         
 class Graphe_v2:
     """Utilise un dictionnaire de voisinage sommet -> voisins"""
@@ -65,3 +67,11 @@ def dfs(depart, graphe):
             deja_visites.add(sommet_courant)
             for voisin in graphe[sommet_courant]:
                 a_visites.append(voisin)
+
+                
+def convertit12(graphe: Graphe_v1) -> Graphe_v2:
+    """Convertit entre les deux représentations."""
+    voisinage = dict()
+    for sommet in graphe._sommets:
+        voisinage[sommet] = list(graphe[sommet])
+    return Graphe_v2(voisinage=voisinage)
