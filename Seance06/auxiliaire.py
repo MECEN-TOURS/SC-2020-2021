@@ -129,13 +129,15 @@ class Grille:
 
     def __eq__(self, autre: Any) -> bool:
         """Egalité si memes cases."""
+        if type(autre) != type(self):
+            return False
         return self._cases == autre._cases
 
     def __iter__(self) -> Iterator[Valeur]:
         """On itère sur de gauche à droite de haut en bas."""
         return iter(self._cases)
 
-    def __getitem__(self, indice: int):
+    def __getitem__(self, indice: int) -> Valeur:
         """On accède à la case voulue.
 
         Permet de faire self[indice]
@@ -144,7 +146,7 @@ class Grille:
         """
         return self._cases[indice]
 
-    def __setitem__(self, indice: int, valeur):
+    def __setitem__(self, indice: int, valeur: Valeur):
         """On insère à la case voulue.
 
         Permet de faire self[indice] = valeur
