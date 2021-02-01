@@ -3,7 +3,7 @@
 Librairie pour le parcours graphe.
 """
 from collections import deque
-from typing import List, Tuple
+from typing import Dict, List, Tuple
 
 Sommet = int
 
@@ -15,7 +15,9 @@ class Graphe_v1:
         
     def __getitem__(self, sommet: Sommet):
         """Itère sur les voisins du sommet."""
-        ...
+        for depart, arrivee in self._arretes:
+            if depart == sommet:
+                yield arrivee
         
 class Graphe_v2:
     """Utilise un dictionnaire de voisinage sommet -> voisins"""
@@ -24,7 +26,8 @@ class Graphe_v2:
         
     def __getitem__(self, sommet):
         """Itère sur les voisins du sommet."""
-        ...
+        for voisin in self._voisinage[sommet]:
+            yield voisin
 
 class Graphe_v3:
     """Utilise la représentation matricielle."""
