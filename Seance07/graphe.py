@@ -31,15 +31,17 @@ class Graphe_v2:
 
 class Graphe_v3:
     """Utilise la représentation matricielle."""
-    def __init__(self, ):
-        ...
+    def __init__(self, adjacence=List[List[int]]):
+        self._adjacence = adjacence
         
     def __getitem__(self, sommet):
         """Itère sur les voisins du sommet."""
-        ...
+        for indice, valeur in enumerate(self._adjacence[sommet - 1]):
+            if valeur == 1:
+                yield (indice + 1)
     
     
-def dfs(depart, graphe):
+def bfs(depart, graphe):
     """Itèrateur sur les sommets du graphe en partant de depart."""
     deja_visites = set()
     a_visites = deque([depart])
@@ -52,7 +54,7 @@ def dfs(depart, graphe):
                 a_visites.appendleft(voisin)
             
     
-def bfs(depart, graphe):
+def dfs(depart, graphe):
     """Itèrateur sur les sommets du graphe en partant de depart."""
     deja_visites = set()
     a_visites = deque([depart])
