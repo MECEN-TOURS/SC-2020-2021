@@ -33,7 +33,6 @@ class GrapheP:
         sommets = list(set([depart for ((depart, _), _) in arretes]))
         return cls(sommets=sommets, arretes=arretes)
       
-
         
 exemple = GrapheP.par_str_non_ordonne(
 """
@@ -53,6 +52,7 @@ GH2
 GI1
 """
 )
+
 assert sorted(exemple._sommets) == list("ABCDEFGHI")
 assert len(exemple._arretes) == 28
         
