@@ -197,5 +197,7 @@ Trouver la distance entre $A$ et $I$ dans le graphe ci-dessous.
 **EXERCICE** 10min par question
 
 - Coder une classe pour représenter un graphe pondéré -> 11h45
+- Coder un constructeur alternatif pour les non ordonnés. -> 12h05
 - Coder une fonction utilisant l'algorithme de Dijkstra pour calculer les distances minimales entre deux sommets.
 - Coder une fonction pour trouver un chemin de longueur minimale entre deux sommets.
+
