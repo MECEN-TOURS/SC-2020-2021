@@ -24,7 +24,14 @@ class GrapheP:
     
     @classmethod
     def par_str_non_ordonne(cls, graphe: str) -> "GrapheP":
-        ...
+        arretes = list()
+        for ligne in graphe.strip().splitlines():
+            depart, arrivee, *poids = ligne
+            poids = int("".join(poids))
+            arretes.append(((depart, arrivee), poids))
+            arretes.append(((arrivee, depart), poids))
+        sommets = list(set([depart for ((depart, _), _) in arretes]))
+        return cls(sommets=sommets, arretes=arretes)
       
 
         
@@ -47,6 +54,7 @@ GI1
 """
 )
 assert sorted(exemple._sommets) == list("ABCDEFGHI")
+assert len(exemple._arretes) == 28
         
 def calcule_distance(depart, graphe):
     ...
