@@ -193,3 +193,9 @@ Trouver la distance entre $A$ et $I$ dans le graphe ci-dessous.
 | I |   |   |   |   |   |   |   | 11| 8 | 8 |
 
 <img src="./graphe_11.svg"/>
+
+**EXERCICE** 10min par question
+
+- Coder une classe pour représenter un graphe pondéré -> 11h45
+- Coder une fonction utilisant l'algorithme de Dijkstra pour calculer les distances minimales entre deux sommets.
+- Coder une fonction pour trouver un chemin de longueur minimale entre deux sommets.
