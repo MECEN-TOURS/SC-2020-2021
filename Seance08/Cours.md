@@ -200,4 +200,6 @@ Trouver la distance entre $A$ et $I$ dans le graphe ci-dessous.
 - Coder un constructeur alternatif pour les non ordonnés. -> 12h05
 - Coder une fonction utilisant l'algorithme de Dijkstra pour calculer les distances minimales entre deux sommets.
 - Coder une fonction pour trouver un chemin de longueur minimale entre deux sommets.
+- Appliquer le tout à l'exemple ci-dessus.
+- Applique le tout à la carte de France.
 
