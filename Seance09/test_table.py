@@ -22,7 +22,7 @@ def test_init(graphe_bateau):
     """Initialisation."""
     table = Table(graphe=graphe_bateau, depart="A")
     assert isinstance(table, Table)
-    assert table.visites == set()
+    assert table.visites == [None]
     assert table.graphe == graphe_bateau
     assert table.colonnes == [{"A": 0, "B": float("inf"), "C": float("inf")}]
 
@@ -39,7 +39,7 @@ def test_repr(graphe_bateau):
 def test_str(graphe_bateau):
     """Représentation."""
     table = Table(graphe=graphe_bateau, depart="A")
-    assert str(table) == "[{'A': 0, 'B': inf, 'C': inf}]"
+    assert str(table) == "   NaN\nA  0.0\nB  inf\nC  inf"
 
 
 def test_eq(graphe_bateau):
@@ -50,25 +50,25 @@ def test_eq(graphe_bateau):
 
 
 def test_prochain(graphe_bateau):
-    """Test trouve_prochain."""
+    """Test _trouve_prochain."""
     table = Table(graphe=graphe_bateau, depart="A")
-    assert table.trouve_prochain() == "A"
+    assert table._trouve_prochain() == "A"
 
 
 def test_nouvelle_colonne(graphe_bateau):
-    """Test genere_nouvelle_colonne."""
+    """Test _genere_nouvelle_colonne."""
     table = Table(graphe=graphe_bateau, depart="A")
-    suivant = table.trouve_prochain()
-    table.genere_nouvelle_colonne(sommet_courant=suivant)
-    assert table.visites == {"A"}
+    suivant = table._trouve_prochain()
+    table._genere_nouvelle_colonne(sommet_courant=suivant)
+    assert table.visites == [None, "A"]
     assert table.colonnes[-1] == {"A": 0, "B": 1, "C": 4}
 
 
 def test_lance_dijkstra(graphe_bateau):
     """Test l'algorithme de Dijkstra."""
     table = Table(graphe=graphe_bateau, depart="A")
-    table.lance()
-    assert table.visites == set("ABC")
+    table.lance_dijkstra()
+    assert table.visites == [None, "A", "B", "C"]
     assert table.colonnes == [
         {"A": 0, "B": float("inf"), "C": float("inf")},
         {"A": 0, "B": 1, "C": 4},
