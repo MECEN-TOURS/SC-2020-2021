@@ -22,9 +22,9 @@ def test_init(graphe_bateau):
     """Initialisation."""
     table = Table(graphe=graphe_bateau, depart="A")
     assert isinstance(table, Table)
-    assert table.visites == [None]
-    assert table.graphe == graphe_bateau
-    assert table.colonnes == [{"A": 0, "B": float("inf"), "C": float("inf")}]
+    assert table._visites == [None]
+    assert table._graphe == graphe_bateau
+    assert table._colonnes == [{"A": 0, "B": float("inf"), "C": float("inf")}]
 
 
 def test_repr(graphe_bateau):
@@ -60,16 +60,16 @@ def test_nouvelle_colonne(graphe_bateau):
     table = Table(graphe=graphe_bateau, depart="A")
     suivant = table._trouve_prochain()
     table._genere_nouvelle_colonne(sommet_courant=suivant)
-    assert table.visites == [None, "A"]
-    assert table.colonnes[-1] == {"A": 0, "B": 1, "C": 4}
+    assert table._visites == [None, "A"]
+    assert table._colonnes[-1] == {"A": 0, "B": 1, "C": 4}
 
 
 def test_lance_dijkstra(graphe_bateau):
     """Test l'algorithme de Dijkstra."""
     table = Table(graphe=graphe_bateau, depart="A")
     table.lance_dijkstra()
-    assert table.visites == [None, "A", "B", "C"]
-    assert table.colonnes == [
+    assert table._visites == [None, "A", "B", "C"]
+    assert table._colonnes == [
         {"A": 0, "B": float("inf"), "C": float("inf")},
         {"A": 0, "B": 1, "C": 4},
         {"A": 0, "B": 1, "C": 3},

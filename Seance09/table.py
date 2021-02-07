@@ -34,39 +34,39 @@ class Table:
 
     def __init__(self, graphe: GrapheP, depart: Sommet):
         """Initialise à partir du graphe et du sommet."""
-        self.depart = depart
-        self.visites: List[Optional[Sommet]] = [None]
-        self.graphe = graphe
-        self.colonnes: List[Dict[Sommet, Poids]] = list()
+        self._depart = depart
+        self._visites: List[Optional[Sommet]] = [None]
+        self._graphe = graphe
+        self._colonnes: List[Dict[Sommet, Poids]] = list()
         premiere = {sommet: float("inf") for sommet in graphe.sommets}
         premiere[depart] = 0
-        self.colonnes.append(premiere)
+        self._colonnes.append(premiere)
 
     def __repr__(self) -> str:
         """Pour déboggage."""
-        return f"Table(graphe={self.graphe!r}, depart={self.depart!r})"
+        return f"Table(graphe={self._graphe!r}, depart={self._depart!r})"
 
     def __eq__(self, autre: Any) -> bool:
         """Egalite par les attributs."""
         if type(self) != type(autre):
             return False
         return (
-            self.graphe == autre.graphe
-            and self.visites == autre.visites
-            and self.colonnes == autre.colonnes
+            self._graphe == autre._graphe
+            and self._visites == autre._visites
+            and self._colonnes == autre._colonnes
         )
 
     def __str__(self) -> str:
         """Affiche la table."""
-        df = pd.DataFrame(data=self.colonnes, index=self.visites)
+        df = pd.DataFrame(data=self._colonnes, index=self._visites)
         return str(df.T)
 
     def _trouve_prochain(self) -> Sommet:
         """Trouve le sommet non visite de plus petit poids."""
         resultat: Optional[Sommet] = None
         poids_min: Poids = float("inf")
-        for sommet, poids in self.colonnes[-1].items():
-            if poids < poids_min and sommet not in self.visites:
+        for sommet, poids in self._colonnes[-1].items():
+            if poids < poids_min and sommet not in self._visites:
                 resultat = sommet
                 poids_min = poids
 
@@ -78,16 +78,16 @@ class Table:
     def _genere_nouvelle_colonne(self, sommet_courant: Sommet):
         """Rajoute une nouvelle colonne à partir du sommet."""
         nouvelle_colonne: Dict[Sommet, Poids] = dict()
-        self.visites.append(sommet_courant)
-        for voisin, poids in self.graphe[sommet_courant].items():
+        self._visites.append(sommet_courant)
+        for voisin, poids in self._graphe[sommet_courant].items():
             nouvelle_colonne[voisin] = min(
-                self.colonnes[-1][voisin],
-                self.colonnes[-1][sommet_courant] + poids,
+                self._colonnes[-1][voisin],
+                self._colonnes[-1][sommet_courant] + poids,
             )
-        for sommet in self.graphe.sommets:
+        for sommet in self._graphe.sommets:
             if sommet not in nouvelle_colonne:
-                nouvelle_colonne[sommet] = self.colonnes[-1][sommet]
-        self.colonnes.append(nouvelle_colonne)
+                nouvelle_colonne[sommet] = self._colonnes[-1][sommet]
+        self._colonnes.append(nouvelle_colonne)
 
     def lance_dijkstra(self):
         """Fait tourner l'algorithme de Dijkstra."""
