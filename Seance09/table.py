@@ -5,7 +5,7 @@
 Table pour faire tourner l'algorithme de Dijkstra.
 """
 import pandas as pd
-from typing import Any, Dict, List, Optional
+from typing import Any, Deque, Dict, List, Optional
 from graphe_p import GrapheP, Sommet, Poids
 from collections import deque
 
@@ -101,7 +101,7 @@ class Table:
             self._genere_nouvelle_colonne(sommet_courant=prochain)
         self._complete = True
 
-    def calcule_chemin(self, arrivee: Sommet):
+    def calcule_chemin(self, arrivee: Sommet) -> Deque[Sommet]:
         """Calcule le chemin minimale."""
         if not self._complete:
             self.lance_dijkstra()

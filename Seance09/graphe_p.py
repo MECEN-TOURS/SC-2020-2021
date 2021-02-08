@@ -188,4 +188,9 @@ class GrapheP:
     
     def genere_dot(self, nom_fichier="temp"):
         """Ecrit un fichier au format dot."""
-        ...
+        with open(nom_fichier + ".dot", "w") as fichier:
+            fichier.write(f"digraph {nom_fichier} {{\n")
+            for ((depart, arrivee), poids) in self.arretes:
+                fichier.write(f"{depart} -> {arrivee} [label={poids}];\n")
+            fichier.write(f"}}")
+            
