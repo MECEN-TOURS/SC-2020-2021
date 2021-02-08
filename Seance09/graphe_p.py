@@ -185,3 +185,7 @@ class GrapheP:
             [matrice[j][i] for j, _ in enumerate(ligne)]
             for i, ligne in enumerate(matrice)
         ]
+    
+    def genere_dot(self, nom_fichier="temp"):
+        """Ecrit un fichier au format dot."""
+        ...
