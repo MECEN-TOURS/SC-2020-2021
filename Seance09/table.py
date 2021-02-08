@@ -7,6 +7,7 @@ Table pour faire tourner l'algorithme de Dijkstra.
 import pandas as pd
 from typing import Any, Dict, List, Optional
 from graphe_p import GrapheP, Sommet, Poids
+from collections import deque
 
 
 class Table:
@@ -41,6 +42,7 @@ class Table:
         premiere = {sommet: float("inf") for sommet in graphe.sommets}
         premiere[depart] = 0
         self._colonnes.append(premiere)
+        self._complete = False
 
     def __repr__(self) -> str:
         """Pour déboggage."""
@@ -97,3 +99,21 @@ class Table:
             except ValueError:
                 break
             self._genere_nouvelle_colonne(sommet_courant=prochain)
+        self._complete = True
+
+    def calcule_chemin(self, arrivee: Sommet):
+        """Calcule le chemin minimale."""
+        if not self._complete:
+            self.lance_dijkstra()
+        chemin = deque()
+        courant = arrivee
+        while courant != self._depart:
+            chemin.appendleft(courant)
+            for indice, colonne in enumerate(self._colonnes):
+                if colonne[courant] == self._colonnes[-1][courant]:
+                    break
+            courant = self._visites[indice]
+        chemin.appendleft(self._depart)
+        return chemin
+        
+        
