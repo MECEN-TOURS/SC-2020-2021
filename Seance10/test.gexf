@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2021-02-10">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <attributes mode="static" class="edge">
+      <attribute id="0" title="couleur" type="string" />
+    </attributes>
+    <nodes>
+      <node id="1" label="Premier nombre entier?" />
+      <node id="10" label="Dernier considéré." />
+    </nodes>
+    <edges>
+      <edge source="1" target="10" id="0">
+        <attvalues>
+          <attvalue for="0" value="bleu" />
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

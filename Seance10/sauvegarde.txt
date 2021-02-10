@@ -1,0 +1,13 @@
+#/home/vincent/miniconda3/lib/python3.8/site-packages/ipykernel_launcher.py -f /home/vincent/.local/share/jupyter/runtime/kernel-e0a69daf-b55d-4c43-94ca-60a642962522.json
+# GMT Wed Feb 10 21:16:08 2021
+# 
+1 1 2 3 4 5 6 7 8 9 10
+2 2 4 6 8 10
+3 3 6 9
+4 4 8
+5 5 10
+6 6
+7 7
+8 8
+9 9
+10 10
