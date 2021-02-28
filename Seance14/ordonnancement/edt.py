@@ -164,7 +164,7 @@ class EDT:
 
     def genere_table(self) -> Table:
         """Retourn une table rich."""
-        resultat = Table()
+        resultat = Table(title="Solution du problème")
         resultat.add_column("Tache")
         resultat.add_column("Début")
         resultat.add_column("Fin")

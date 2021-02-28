@@ -22,9 +22,7 @@ I / 3 /
 J / 4 / D G
 """
 )
-print("Problème à résoudre:\n")
 mon_probleme.affiche()
 
 solution = resous(mon_probleme)
-print("Et la solution.\n")
 solution.affiche()

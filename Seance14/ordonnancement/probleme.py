@@ -160,7 +160,7 @@ class Probleme:
 
     def genere_table(self) -> Table:
         """Renvoie une table rich."""
-        resultat = Table()
+        resultat = Table(title="Problème d'ordonnancement")
         resultat.add_column("Tache")
         resultat.add_column("Durée")
         resultat.add_column("Prérequis")
