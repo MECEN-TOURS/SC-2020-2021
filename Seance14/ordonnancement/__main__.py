@@ -5,21 +5,26 @@
 Démonstration du module.
 """
 
-from rich import print
 from .probleme import Probleme
 from .algorithme import resous
 
 mon_probleme = Probleme.par_str(
     """
-A / 1 / 
-B / 2 / A
-C / 3 / A B
-D / 4 / A
+A / 1.5 / F
+B / 3 / I
+C / 4 / F I
+D / 1 / A G F
+E / 6 / A B
+F / 2 /
+G / 4.5 / B C F
+H / 0.5 / A I J
+I / 3 /
+J / 4 / D G
 """
 )
 print("Problème à résoudre:\n")
-print(mon_probleme.affiche())
+mon_probleme.affiche()
 
 solution = resous(mon_probleme)
 print("Et la solution.\n")
-print(solution.affiche())
+solution.affiche()
