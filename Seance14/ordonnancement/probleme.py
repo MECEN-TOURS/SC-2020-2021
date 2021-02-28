@@ -69,8 +69,17 @@ class Probleme:
     Probleme(taches=[Tache(nom='A', duree=1, prerequis=[]), Tache(nom='B', duree=2, prerequis=['A']), Tache(nom='C', duree=3, prerequis=['A', 'B']), Tache(nom='D', duree=4, prerequis=['A'])])
     >>> probleme == probleme_bis
     True
+    >>> probleme_bis.affiche()
+    ┏━━━━━━━┳━━━━━━━┳━━━━━━━━━━━┓
+    ┃ Tache ┃ Durée ┃ Prérequis ┃
+    ┡━━━━━━━╇━━━━━━━╇━━━━━━━━━━━┩
+    │ A     │ 1     │           │
+    │ B     │ 2     │ A         │
+    │ C     │ 3     │ A, B      │
+    │ D     │ 4     │ A         │
+    └───────┴───────┴───────────┘
     >>> from rich import print
-    >>> print(probleme_bis.affiche())
+    >>> print(probleme_bis.genere_table())
     ┏━━━━━━━┳━━━━━━━┳━━━━━━━━━━━┓
     ┃ Tache ┃ Durée ┃ Prérequis ┃
     ┡━━━━━━━╇━━━━━━━╇━━━━━━━━━━━┩
@@ -149,7 +158,7 @@ class Probleme:
         """Accès aux tâches par leurs noms."""
         return self._taches[nom]
 
-    def affiche(self) -> Table:
+    def genere_table(self) -> Table:
         """Renvoie une table rich."""
         resultat = Table()
         resultat.add_column("Tache")
@@ -161,3 +170,9 @@ class Probleme:
             )
 
         return resultat
+
+    def affiche(self):
+        """Affiche la table directement."""
+        from rich import print
+
+        print(self.genere_table())

@@ -67,8 +67,7 @@ class EDT:
     e=4, prerequis=['A']), debut=1, fin=5)])
     >>> edt == edt_bis
     True
-    >>> from rich import print
-    >>> print(edt.affiche())
+    >>> edt.affiche()
     ┏━━━━━━━┳━━━━━━━┳━━━━━┓
     ┃ Tache ┃ Début ┃ Fin ┃
     ┡━━━━━━━╇━━━━━━━╇━━━━━┩
@@ -82,7 +81,8 @@ class EDT:
     ValueError: La tache A est déjà présente dans l'emploi du temps.
     >>> edt.ajoute(Activite(tache=Tache("E", duree=4, prerequis=["D"]), debut=5, fin=8))
     ValueError: Le début et la fin ne sont pas compatibles avec la durée de l'activité Activite(tache=Tache(nom='E', duree=4, prerequis=['D']), debut=5, fin=8)
-    >>> print(edt_bis.affiche())
+    >>> from rich import print
+    >>> print(edt_bis.genere_table())
     ┏━━━━━━━┳━━━━━━━┳━━━━━┓
     ┃ Tache ┃ Début ┃ Fin ┃
     ┡━━━━━━━╇━━━━━━━╇━━━━━┩
@@ -95,7 +95,7 @@ class EDT:
     True
     >>> edt_bis.ajoute(Activite(tache=Tache(nom="E", duree=5, prerequis=["D"]), debut=4, fin=9)
     )
-    >>> print(edt_bis.affiche())
+    >>> edt_bis.affiche()
     ┏━━━━━━━┳━━━━━━━┳━━━━━┓
     ┃ Tache ┃ Début ┃ Fin ┃
     ┡━━━━━━━╇━━━━━━━╇━━━━━┩
@@ -162,7 +162,7 @@ class EDT:
                     return False
         return True
 
-    def affiche(self) -> Table:
+    def genere_table(self) -> Table:
         """Retourn une table rich."""
         resultat = Table()
         resultat.add_column("Tache")
@@ -174,3 +174,9 @@ class EDT:
             )
 
         return resultat
+
+    def affiche(self):
+        """Affiche la table."""
+        from rich import print
+
+        print(self.genere_table())
