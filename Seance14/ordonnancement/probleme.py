@@ -2,22 +2,15 @@
 # -*- coding: utf-8 -*-
 """Description.
 
-Classes pour résoudre des problèmes d'ordonnancement.
-
+Classes Tache et Probleme permettant de décrire le problème d'ordonnancement.
 TODO:
-    - Tester complètement y compris mutations?
-    - Refactor de la fonction de résolution?
-    - Refactor _est_valide pour avoir des exception directement dans __init__
-    - Documenter l'interface publique?
-    - La vérifiction de la durée de l'activité par rapport aux tâches est plutôt du ressort de Activite que de celui de EDT?
+    - Refactor _est_valide pour avoir des exceptions directement dans __init__
 """
-import networkx as nx
 from typing import Any, Dict, List, Union, Generator
 from dataclasses import dataclass
 from rich.table import Table
 
 Duree = Union[int, float]
-Instant = Union[int, float]
 Nom = str
 
 
@@ -168,114 +161,3 @@ class Probleme:
             )
 
         return resultat
-
-
-@dataclass
-class Activite:
-    """Tache plannifiée."""
-
-    tache: Tache
-    debut: Instant
-    fin: Instant
-
-
-class EDT:
-    """Emploi du temps."""
-
-    def __init__(self, activites: List[Activite]):
-        """Instancie à partir de la liste d'activites."""
-        self._activites: List[Activite] = []
-        for activite in activites:
-            self.ajoute(activite)
-
-    def __eq__(self, autre: Any) -> bool:
-        """Pour ne pas tester l'identité."""
-        if type(autre) != type(self):
-            return False
-        return self._activites == autre._activites
-
-    def __repr__(self) -> str:
-        """Repr."""
-        return f"EDT(activites={self._activites})"
-
-    @property
-    def activites(self) -> Generator[Activite, None, None]:
-        """ITérateur."""
-        yield from self._activites
-
-    def __getitem__(self, nom: Nom) -> Activite:
-        """Accède aux activités par leur nom de tâche."""
-        for activite in self._activites:
-            if activite.tache.nom == nom:
-                return activite
-
-        raise ValueError("Pas d'activité avec ce nom de tâche.")
-
-    def ajoute(self, activite: Activite):
-        """Rajoute une nouvelle activité."""
-        if activite.tache.duree > activite.fin - activite.debut:
-            raise ValueError(
-                "Le début et la fin ne sont pas compatibles avec la"
-                f" durée de l'activité f{activite}"
-            )
-        if any(
-            activite.tache.nom == autre.tache.nom for autre in self.activites
-        ):
-            raise ValueError(
-                f"La tache {activite.tache.nom} est déjà présente "
-                "dans l'emploi du temps."
-            )
-        self._activites.append(activite)
-
-    def est_valide(self) -> bool:
-        """Vérifie si l'emploi du temps respecte les contraintes."""
-        for activite in self.activites:
-            for prerequis in activite.tache.prerequis:
-                if activite.debut < self[prerequis].fin:
-                    return False
-        return True
-
-    def affiche(self) -> Table:
-        """Retourn une table rich."""
-        resultat = Table()
-        resultat.add_column("Tache")
-        resultat.add_column("Début")
-        resultat.add_column("Fin")
-        for activite in self._activites:
-            resultat.add_row(
-                activite.tache.nom, str(activite.debut), str(activite.fin)
-            )
-
-        return resultat
-
-
-def _genere_graphe(probleme: Probleme) -> nx.DiGraph:
-    """Crée le graphe associé au problème."""
-    resultat = nx.DiGraph()
-    for tache in probleme.taches:
-        for prerequis in tache.prerequis:
-            resultat.add_edge(tache.nom, prerequis)
-    return resultat
-
-
-def resous(probleme: Probleme) -> EDT:
-    """Résout un problème d'ordonnancement."""
-    graphe = _genere_graphe(probleme)
-    if not nx.is_directed_acyclic_graph(G=graphe):
-        raise ValueError("Le problème n'a pas de solution.")
-    bon_ordre = [probleme[nom] for nom in nx.topological_sort(G=graphe)]
-    resultat = EDT(activites=[])
-    for tache_courante in bon_ordre:
-        demarrage = max(
-            resultat[prerequis].fin for prerequis in tache_courante.prerequis
-        )
-        arrivee = demarrage + tache_courante.duree
-        resultat.ajoute(
-            Activite(
-                tache=tache_courante,
-                debut=demarrage,
-                fin=arrivee,
-            )
-        )
-
-    return resultat

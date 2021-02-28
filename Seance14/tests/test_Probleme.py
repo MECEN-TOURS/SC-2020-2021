@@ -5,7 +5,7 @@
 Tests pour la classe Probleme du module ordonnancement.
 """
 import pytest
-from Seance14.ordonnancement import Probleme, Tache
+from ordonnancement import Probleme, Tache
 
 
 @pytest.fixture

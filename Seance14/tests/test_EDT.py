@@ -5,7 +5,7 @@
 Tests pour le module ordonnancement.
 """
 import pytest
-from Seance14.ordonnancement import Activite, EDT, Probleme, Tache
+from ordonnancement import Activite, EDT, Probleme, Tache
 
 
 @pytest.fixture
