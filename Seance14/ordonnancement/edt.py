@@ -24,6 +24,13 @@ class Activite:
     debut: Instant
     fin: Instant
 
+    def __post_init__(self):
+        """Vérifie que la durée est respectée."""
+        if self.fin - self.debut < self.tache.duree:
+            raise ValueError(
+                "L'activité correspondant à la tache {self.tache} ne respecte pas la durée."
+            )
+
 
 class EDT:
     """Emploi du temps.
@@ -140,11 +147,6 @@ class EDT:
 
     def ajoute(self, activite: Activite):
         """Rajoute une nouvelle activité."""
-        if activite.tache.duree > activite.fin - activite.debut:
-            raise ValueError(
-                "Le début et la fin ne sont pas compatibles avec la"
-                f" durée de l'activité f{activite}"
-            )
         if any(
             activite.tache.nom == autre.tache.nom for autre in self.activites
         ):

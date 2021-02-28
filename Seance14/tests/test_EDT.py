@@ -42,6 +42,13 @@ D / 4 / A
     ]
 
 
+def test_verification_activite():
+    """Compatbilité."""
+    a = Tache(nom="A", duree=2, prerequis=[])
+    with pytest.raises(ValueError):
+        Activite(tache=a, debut=0, fin=1)
+
+
 def test_instanciation(activites):
     """Création."""
     edt = EDT(activites=activites)

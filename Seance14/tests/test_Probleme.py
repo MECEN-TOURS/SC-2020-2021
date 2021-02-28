@@ -18,6 +18,12 @@ def taches():
     return [a, b, c, d]
 
 
+def test_verification_tache():
+    """La durée doit être positive."""
+    with pytest.raises(ValueError):
+        Tache(nom="A", duree=-1, prerequis=[])
+
+
 def test_instanciation(taches):
     """Création."""
     probleme = Probleme(taches=taches)

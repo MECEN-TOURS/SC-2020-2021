@@ -22,6 +22,11 @@ class Tache:
     duree: Duree
     prerequis: List[Nom]
 
+    def __post_init__(self):
+        """Vérifie que la durée est positive."""
+        if self.duree < 0:
+            raise ValueError("La durée doit être positive.")
+
 
 class Probleme:
     """Représente un problème d'ordonnancement.
