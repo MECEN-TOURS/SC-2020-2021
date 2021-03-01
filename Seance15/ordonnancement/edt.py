@@ -4,6 +4,7 @@
 
 Contient les classes Activite et EDT.
 """
+import matplotlib.pyplot as plt
 from typing import Any, List, Union, Generator
 from dataclasses import dataclass
 from rich.table import Table
@@ -178,3 +179,15 @@ class EDT:
         from rich import print
 
         print(self.genere_table())
+
+    def genere_graphique(self) -> plt.Figure:
+        """Renvoie une figure matplotlib."""
+        figure, repere = plt.subplots()
+        repere.set_ylabel("Taches")
+        repere.set_xlabel("Instants")
+        repere.set_title("Solution du problème d'ordonnancement")
+        for indice, activite in enumerate(self.activites):
+            repere.plot([activite.debut, activite.fin], [-indice, -indice], color="blue", linewidth=2)
+        repere.set_yticks([-indice for indice, _ in enumerate(self.activites)])
+        repere.set_yticklabels([activite.tache.nom for activite in self.activites])
+        return figure
