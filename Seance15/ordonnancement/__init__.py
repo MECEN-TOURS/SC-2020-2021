@@ -4,7 +4,6 @@
 
 Exemple:
 
->>> from rich import print
 >>> from ordonnancement import Probleme, resous
 >>> mon_probleme = Probleme.par_str('''
 ... A / 1 /
@@ -13,7 +12,7 @@ Exemple:
 ... D / 4 / A
 ... '''
 ... )
->>> print(mon_probleme.affiche())
+>>> mon_probleme.affiche()
 ┏━━━━━━━┳━━━━━━━┳━━━━━━━━━━━┓
 ┃ Tache ┃ Durée ┃ Prérequis ┃
 ┡━━━━━━━╇━━━━━━━╇━━━━━━━━━━━┩
@@ -23,7 +22,7 @@ Exemple:
 │ D     │ 4     │ A         │
 └───────┴───────┴───────────┘
 >>> solution = resous(mon_probleme)
->>> print(solution.affiche())
+>>> solution.affiche()
 ┏━━━━━━━┳━━━━━━━┳━━━━━┓
 ┃ Tache ┃ Début ┃ Fin ┃
 ┡━━━━━━━╇━━━━━━━╇━━━━━┩
