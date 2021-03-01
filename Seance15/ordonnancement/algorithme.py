@@ -38,7 +38,7 @@ def resous(probleme: Probleme) -> EDT:
     ... D / 4 / A
     ... '''
     ... )
-    >>> print(probleme.affiche())
+    >>> print(probleme.genere_table())
     ┏━━━━━━━┳━━━━━━━┳━━━━━━━━━━━┓
     ┃ Tache ┃ Durée ┃ Prérequis ┃
     ┡━━━━━━━╇━━━━━━━╇━━━━━━━━━━━┩
@@ -48,7 +48,7 @@ def resous(probleme: Probleme) -> EDT:
     │ D     │ 4     │ A         │
     └───────┴───────┴───────────┘
     >>> solution = resous(probleme)
-    >>> print(solution.affiche())
+    >>> print(solution.genere_table())
     ┏━━━━━━━┳━━━━━━━┳━━━━━┓
     ┃ Tache ┃ Début ┃ Fin ┃
     ┡━━━━━━━╇━━━━━━━╇━━━━━┩

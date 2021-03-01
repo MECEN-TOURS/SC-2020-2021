@@ -3,10 +3,6 @@
 """Description.
 
 Contient les classes Activite et EDT.
-TODO:
-    - Tester complètement y compris mutations?
-    - Documenter l'interface publique?
-    - La vérifiction de la durée de l'activité par rapport aux tâches est plutôt du ressort de Activite que de celui de EDT?
 """
 from typing import Any, List, Union, Generator
 from dataclasses import dataclass
@@ -28,7 +24,7 @@ class Activite:
         """Vérifie que la durée est respectée."""
         if self.fin - self.debut < self.tache.duree:
             raise ValueError(
-                "L'activité correspondant à la tache {self.tache} ne respecte pas la durée."
+                f"L'activité correspondant à la tache {self.tache} ne respecte pas la durée."
             )
 
 
