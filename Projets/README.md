@@ -12,3 +12,7 @@
 - Les exemples particuliers sont de difficultés différentes.
 - Pour les exemples difficiles on commencera potentiellement par une version simplifiée pour l'étape 2.
 - Pour les exemples plus simples il faudra au contraire faire preuve d'ambition dans les étapes 3 et 6.
+
+# Affectations
+
+Faites tourner le script pour voir quel est votre sujet.
