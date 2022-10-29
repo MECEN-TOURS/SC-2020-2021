@@ -1,0 +1,5 @@
+graph essai {
+    a -- b [label=1, color=blue];
+    a -- c [label=4];
+    b -- c [label=2, color=blue];
+}

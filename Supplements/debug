@@ -1,0 +1,1240 @@
+Source path:... decorateur.py
+Starting var:.. n = 10
+16:34:04.833189 call        43 def fibo_rec(n):
+16:34:04.833632 line        44     if n < 2:
+16:34:04.833742 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+    Starting var:.. n = 9
+    16:34:04.833852 call        43 def fibo_rec(n):
+    16:34:04.834368 line        44     if n < 2:
+    16:34:04.834432 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+        Starting var:.. n = 8
+        16:34:04.834498 call        43 def fibo_rec(n):
+        16:34:04.834575 line        44     if n < 2:
+        16:34:04.834623 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+            Starting var:.. n = 7
+            16:34:04.834750 call        43 def fibo_rec(n):
+            16:34:04.834977 line        44     if n < 2:
+            16:34:04.835423 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                Starting var:.. n = 6
+                16:34:04.835870 call        43 def fibo_rec(n):
+                16:34:04.836107 line        44     if n < 2:
+                16:34:04.836243 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                    Starting var:.. n = 5
+                    16:34:04.836450 call        43 def fibo_rec(n):
+                    16:34:04.836771 line        44     if n < 2:
+                    16:34:04.836888 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                        Starting var:.. n = 4
+                        16:34:04.837375 call        43 def fibo_rec(n):
+                        16:34:04.837554 line        44     if n < 2:
+                        16:34:04.837626 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                            Starting var:.. n = 3
+                            16:34:04.837941 call        43 def fibo_rec(n):
+                            16:34:04.838127 line        44     if n < 2:
+                            16:34:04.838219 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                                Starting var:.. n = 2
+                                16:34:04.838331 call        43 def fibo_rec(n):
+                                16:34:04.838469 line        44     if n < 2:
+                                16:34:04.838554 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                                    Starting var:.. n = 1
+                                    16:34:04.838673 call        43 def fibo_rec(n):
+                                    16:34:04.838824 line        44     if n < 2:
+                                    16:34:04.838912 line        45         return n
+                                    16:34:04.838997 return      45         return n
+                                    Return value:.. 1
+                                    Elapsed time: 00:00:00.000484
+                                    Starting var:.. n = 0
+                                    16:34:04.839254 call        43 def fibo_rec(n):
+                                    16:34:04.839396 line        44     if n < 2:
+                                    16:34:04.839482 line        45         return n
+                                    16:34:04.839568 return      45         return n
+                                    Return value:.. 0
+                                    Elapsed time: 00:00:00.000489
+                                16:34:04.839813 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                                Return value:.. 1
+                                Elapsed time: 00:00:00.001643
+                                Starting var:.. n = 1
+                                16:34:04.840060 call        43 def fibo_rec(n):
+                                16:34:04.840200 line        44     if n < 2:
+                                16:34:04.840286 line        45         return n
+                                16:34:04.840371 return      45         return n
+                                Return value:.. 1
+                                Elapsed time: 00:00:00.000465
+                            16:34:04.840592 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                            Return value:.. 2
+                            Elapsed time: 00:00:00.002843
+                            Starting var:.. n = 2
+                            16:34:04.840866 call        43 def fibo_rec(n):
+                            16:34:04.841008 line        44     if n < 2:
+                            16:34:04.841097 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                                Starting var:.. n = 1
+                                16:34:04.841206 call        43 def fibo_rec(n):
+                                16:34:04.841340 line        44     if n < 2:
+                                16:34:04.841425 line        45         return n
+                                16:34:04.841515 return      45         return n
+                                Return value:.. 1
+                                Elapsed time: 00:00:00.000486
+                                Starting var:.. n = 0
+                                16:34:04.841787 call        43 def fibo_rec(n):
+                                16:34:04.841927 line        44     if n < 2:
+                                16:34:04.842013 line        45         return n
+                                16:34:04.842096 return      45         return n
+                                Return value:.. 0
+                                Elapsed time: 00:00:00.000464
+                            16:34:04.842318 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                            Return value:.. 1
+                            Elapsed time: 00:00:00.001609
+                        16:34:04.842540 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                        Return value:.. 3
+                        Elapsed time: 00:00:00.005350
+                        Starting var:.. n = 3
+                        16:34:04.842797 call        43 def fibo_rec(n):
+                        16:34:04.842938 line        44     if n < 2:
+                        16:34:04.843025 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                            Starting var:.. n = 2
+                            16:34:04.843130 call        43 def fibo_rec(n):
+                            16:34:04.843262 line        44     if n < 2:
+                            16:34:04.843345 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                                Starting var:.. n = 1
+                                16:34:04.843448 call        43 def fibo_rec(n):
+                                16:34:04.843581 line        44     if n < 2:
+                                16:34:04.843696 line        45         return n
+                                16:34:04.843771 return      45         return n
+                                Return value:.. 1
+                                Elapsed time: 00:00:00.000601
+                                Starting var:.. n = 0
+                                16:34:04.844273 call        43 def fibo_rec(n):
+                                16:34:04.844625 line        44     if n < 2:
+                                16:34:04.844837 line        45         return n
+                                16:34:04.845015 return      45         return n
+                                Return value:.. 0
+                                Elapsed time: 00:00:00.001054
+                            16:34:04.845502 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                            Return value:.. 1
+                            Elapsed time: 00:00:00.002705
+                            Starting var:.. n = 1
+                            16:34:04.845949 call        43 def fibo_rec(n):
+                            16:34:04.846113 line        44     if n < 2:
+                            16:34:04.846174 line        45         return n
+                            16:34:04.846219 return      45         return n
+                            Return value:.. 1
+                            Elapsed time: 00:00:00.000354
+                        16:34:04.846334 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                        Return value:.. 2
+                        Elapsed time: 00:00:00.003628
+                    16:34:04.846456 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                    Return value:.. 5
+                    Elapsed time: 00:00:00.010108
+                    Starting var:.. n = 4
+                    16:34:04.846595 call        43 def fibo_rec(n):
+                    16:34:04.846682 line        44     if n < 2:
+                    16:34:04.846731 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                        Starting var:.. n = 3
+                        16:34:04.846790 call        43 def fibo_rec(n):
+                        16:34:04.846878 line        44     if n < 2:
+                        16:34:04.846926 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                            Starting var:.. n = 2
+                            16:34:04.846983 call        43 def fibo_rec(n):
+                            16:34:04.847057 line        44     if n < 2:
+                            16:34:04.847103 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                                Starting var:.. n = 1
+                                16:34:04.847160 call        43 def fibo_rec(n):
+                                16:34:04.847280 line        44     if n < 2:
+                                16:34:04.847363 line        45         return n
+                                16:34:04.847447 return      45         return n
+                                Return value:.. 1
+                                Elapsed time: 00:00:00.000382
+                                Starting var:.. n = 0
+                                16:34:04.847595 call        43 def fibo_rec(n):
+                                16:34:04.847695 line        44     if n < 2:
+                                16:34:04.847743 line        45         return n
+                                16:34:04.847789 return      45         return n
+                                Return value:.. 0
+                                Elapsed time: 00:00:00.000279
+                            16:34:04.847911 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                            Return value:.. 1
+                            Elapsed time: 00:00:00.001012
+                            Starting var:.. n = 1
+                            16:34:04.848041 call        43 def fibo_rec(n):
+                            16:34:04.848116 line        44     if n < 2:
+                            16:34:04.848163 line        45         return n
+                            16:34:04.848209 return      45         return n
+                            Return value:.. 1
+                            Elapsed time: 00:00:00.000258
+                        16:34:04.848337 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                        Return value:.. 2
+                        Elapsed time: 00:00:00.001632
+                        Starting var:.. n = 2
+                        16:34:04.848467 call        43 def fibo_rec(n):
+                        16:34:04.848543 line        44     if n < 2:
+                        16:34:04.848590 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                            Starting var:.. n = 1
+                            16:34:04.848656 call        43 def fibo_rec(n):
+                            16:34:04.848733 line        44     if n < 2:
+                            16:34:04.848780 line        45         return n
+                            16:34:04.848826 return      45         return n
+                            Return value:.. 1
+                            Elapsed time: 00:00:00.000255
+                            Starting var:.. n = 0
+                            16:34:04.848957 call        43 def fibo_rec(n):
+                            16:34:04.849032 line        44     if n < 2:
+                            16:34:04.849079 line        45         return n
+                            16:34:04.849125 return      45         return n
+                            Return value:.. 0
+                            Elapsed time: 00:00:00.000260
+                        16:34:04.849253 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                        Return value:.. 1
+                        Elapsed time: 00:00:00.000871
+                    16:34:04.849374 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                    Return value:.. 3
+                    Elapsed time: 00:00:00.002863
+                16:34:04.849493 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                Return value:.. 8
+                Elapsed time: 00:00:00.013737
+                Starting var:.. n = 5
+                16:34:04.849623 call        43 def fibo_rec(n):
+                16:34:04.849713 line        44     if n < 2:
+                16:34:04.849773 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                    Starting var:.. n = 4
+                    16:34:04.849828 call        43 def fibo_rec(n):
+                    16:34:04.849899 line        44     if n < 2:
+                    16:34:04.849943 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                        Starting var:.. n = 3
+                        16:34:04.849997 call        43 def fibo_rec(n):
+                        16:34:04.850067 line        44     if n < 2:
+                        16:34:04.850111 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                            Starting var:.. n = 2
+                            16:34:04.850165 call        43 def fibo_rec(n):
+                            16:34:04.850233 line        44     if n < 2:
+                            16:34:04.850276 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                                Starting var:.. n = 1
+                                16:34:04.850330 call        43 def fibo_rec(n):
+                                16:34:04.850399 line        44     if n < 2:
+                                16:34:04.850443 line        45         return n
+                                16:34:04.850487 return      45         return n
+                                Return value:.. 1
+                                Elapsed time: 00:00:00.000235
+                                Starting var:.. n = 0
+                                16:34:04.850609 call        43 def fibo_rec(n):
+                                16:34:04.850714 line        44     if n < 2:
+                                16:34:04.850758 line        45         return n
+                                16:34:04.850802 return      45         return n
+                                Return value:.. 0
+                                Elapsed time: 00:00:00.000271
+                            16:34:04.850914 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                            Return value:.. 1
+                            Elapsed time: 00:00:00.000828
+                            Starting var:.. n = 1
+                            16:34:04.851035 call        43 def fibo_rec(n):
+                            16:34:04.851107 line        44     if n < 2:
+                            16:34:04.851151 line        45         return n
+                            16:34:04.851196 return      45         return n
+                            Return value:.. 1
+                            Elapsed time: 00:00:00.000253
+                        16:34:04.851334 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                        Return value:.. 2
+                        Elapsed time: 00:00:00.001415
+                        Starting var:.. n = 2
+                        16:34:04.851456 call        43 def fibo_rec(n):
+                        16:34:04.851527 line        44     if n < 2:
+                        16:34:04.851572 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                            Starting var:.. n = 1
+                            16:34:04.851626 call        43 def fibo_rec(n):
+                            16:34:04.851733 line        44     if n < 2:
+                            16:34:04.851784 line        45         return n
+                            16:34:04.851829 return      45         return n
+                            Return value:.. 1
+                            Elapsed time: 00:00:00.000282
+                            Starting var:.. n = 0
+                            16:34:04.851951 call        43 def fibo_rec(n):
+                            16:34:04.852021 line        44     if n < 2:
+                            16:34:04.852067 line        45         return n
+                            16:34:04.852110 return      45         return n
+                            Return value:.. 0
+                            Elapsed time: 00:00:00.000237
+                        16:34:04.852222 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                        Return value:.. 1
+                        Elapsed time: 00:00:00.000845
+                    16:34:04.852333 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                    Return value:.. 3
+                    Elapsed time: 00:00:00.002585
+                    Starting var:.. n = 3
+                    16:34:04.852455 call        43 def fibo_rec(n):
+                    16:34:04.852526 line        44     if n < 2:
+                    16:34:04.852571 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                        Starting var:.. n = 2
+                        16:34:04.852626 call        43 def fibo_rec(n):
+                        16:34:04.852730 line        44     if n < 2:
+                        16:34:04.852775 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                            Starting var:.. n = 1
+                            16:34:04.852829 call        43 def fibo_rec(n):
+                            16:34:04.852898 line        44     if n < 2:
+                            16:34:04.852942 line        45         return n
+                            16:34:04.852986 return      45         return n
+                            Return value:.. 1
+                            Elapsed time: 00:00:00.000234
+                            Starting var:.. n = 0
+                            16:34:04.853107 call        43 def fibo_rec(n):
+                            16:34:04.853176 line        44     if n < 2:
+                            16:34:04.853221 line        45         return n
+                            16:34:04.853264 return      45         return n
+                            Return value:.. 0
+                            Elapsed time: 00:00:00.000234
+                        16:34:04.853375 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                        Return value:.. 1
+                        Elapsed time: 00:00:00.000829
+                        Starting var:.. n = 1
+                        16:34:04.853498 call        43 def fibo_rec(n):
+                        16:34:04.853569 line        44     if n < 2:
+                        16:34:04.853614 line        45         return n
+                        16:34:04.853685 return      45         return n
+                        Return value:.. 1
+                        Elapsed time: 00:00:00.000281
+                    16:34:04.853813 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                    Return value:.. 2
+                    Elapsed time: 00:00:00.001437
+                16:34:04.853926 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                Return value:.. 5
+                Elapsed time: 00:00:00.004383
+            16:34:04.854039 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+            Return value:.. 13
+            Elapsed time: 00:00:00.019374
+            Starting var:.. n = 6
+            16:34:04.854161 call        43 def fibo_rec(n):
+            16:34:04.854231 line        44     if n < 2:
+            16:34:04.854276 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                Starting var:.. n = 5
+                16:34:04.854330 call        43 def fibo_rec(n):
+                16:34:04.854400 line        44     if n < 2:
+                16:34:04.854449 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                    Starting var:.. n = 4
+                    16:34:04.854505 call        43 def fibo_rec(n):
+                    16:34:04.854575 line        44     if n < 2:
+                    16:34:04.854619 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                        Starting var:.. n = 3
+                        16:34:04.854708 call        43 def fibo_rec(n):
+                        16:34:04.854779 line        44     if n < 2:
+                        16:34:04.854824 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                            Starting var:.. n = 2
+                            16:34:04.854877 call        43 def fibo_rec(n):
+                            16:34:04.854947 line        44     if n < 2:
+                            16:34:04.854990 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                                Starting var:.. n = 1
+                                16:34:04.855044 call        43 def fibo_rec(n):
+                                16:34:04.855112 line        44     if n < 2:
+                                16:34:04.855156 line        45         return n
+                                16:34:04.855199 return      45         return n
+                                Return value:.. 1
+                                Elapsed time: 00:00:00.000234
+                                Starting var:.. n = 0
+                                16:34:04.855322 call        43 def fibo_rec(n):
+                                16:34:04.855392 line        44     if n < 2:
+                                16:34:04.855436 line        45         return n
+                                16:34:04.855493 return      45         return n
+                                Return value:.. 0
+                                Elapsed time: 00:00:00.000253
+                            16:34:04.855612 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                            Return value:.. 1
+                            Elapsed time: 00:00:00.000847
+                            Starting var:.. n = 1
+                            16:34:04.855770 call        43 def fibo_rec(n):
+                            16:34:04.855840 line        44     if n < 2:
+                            16:34:04.855885 line        45         return n
+                            16:34:04.855928 return      45         return n
+                            Return value:.. 1
+                            Elapsed time: 00:00:00.000238
+                        16:34:04.856040 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                        Return value:.. 2
+                        Elapsed time: 00:00:00.001410
+                        Starting var:.. n = 2
+                        16:34:04.856161 call        43 def fibo_rec(n):
+                        16:34:04.856232 line        44     if n < 2:
+                        16:34:04.856277 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                            Starting var:.. n = 1
+                            16:34:04.856330 call        43 def fibo_rec(n):
+                            16:34:04.856415 line        44     if n < 2:
+                            16:34:04.856471 line        45         return n
+                            16:34:04.856515 return      45         return n
+                            Return value:.. 1
+                            Elapsed time: 00:00:00.000262
+                            Starting var:.. n = 0
+                            16:34:04.856635 call        43 def fibo_rec(n):
+                            16:34:04.856736 line        44     if n < 2:
+                            16:34:04.856780 line        45         return n
+                            16:34:04.856824 return      45         return n
+                            Return value:.. 0
+                            Elapsed time: 00:00:00.000266
+                        16:34:04.856936 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                        Return value:.. 1
+                        Elapsed time: 00:00:00.000860
+                    16:34:04.857054 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                    Return value:.. 3
+                    Elapsed time: 00:00:00.002630
+                    Starting var:.. n = 3
+                    16:34:04.857177 call        43 def fibo_rec(n):
+                    16:34:04.857248 line        44     if n < 2:
+                    16:34:04.857293 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                        Starting var:.. n = 2
+                        16:34:04.857348 call        43 def fibo_rec(n):
+                        16:34:04.857418 line        44     if n < 2:
+                        16:34:04.857462 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                            Starting var:.. n = 1
+                            16:34:04.857547 call        43 def fibo_rec(n):
+                            16:34:04.857666 line        44     if n < 2:
+                            16:34:04.857729 line        45         return n
+                            16:34:04.857773 return      45         return n
+                            Return value:.. 1
+                            Elapsed time: 00:00:00.000310
+                            Starting var:.. n = 0
+                            16:34:04.857902 call        43 def fibo_rec(n):
+                            16:34:04.857973 line        44     if n < 2:
+                            16:34:04.858018 line        45         return n
+                            16:34:04.858062 return      45         return n
+                            Return value:.. 0
+                            Elapsed time: 00:00:00.000240
+                        16:34:04.858175 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                        Return value:.. 1
+                        Elapsed time: 00:00:00.000906
+                        Starting var:.. n = 1
+                        16:34:04.858297 call        43 def fibo_rec(n):
+                        16:34:04.858368 line        44     if n < 2:
+                        16:34:04.858413 line        45         return n
+                        16:34:04.858457 return      45         return n
+                        Return value:.. 1
+                        Elapsed time: 00:00:00.000239
+                    16:34:04.858569 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                    Return value:.. 2
+                    Elapsed time: 00:00:00.001493
+                16:34:04.858709 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                Return value:.. 5
+                Elapsed time: 00:00:00.004466
+                Starting var:.. n = 4
+                16:34:04.858842 call        43 def fibo_rec(n):
+                16:34:04.858918 line        44     if n < 2:
+                16:34:04.858975 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                    Starting var:.. n = 3
+                    16:34:04.859030 call        43 def fibo_rec(n):
+                    16:34:04.859100 line        44     if n < 2:
+                    16:34:04.859145 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                        Starting var:.. n = 2
+                        16:34:04.859199 call        43 def fibo_rec(n):
+                        16:34:04.859268 line        44     if n < 2:
+                        16:34:04.859313 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                            Starting var:.. n = 1
+                            16:34:04.859367 call        43 def fibo_rec(n):
+                            16:34:04.859437 line        44     if n < 2:
+                            16:34:04.859481 line        45         return n
+                            16:34:04.859524 return      45         return n
+                            Return value:.. 1
+                            Elapsed time: 00:00:00.000235
+                            Starting var:.. n = 0
+                            16:34:04.859674 call        43 def fibo_rec(n):
+                            16:34:04.859772 line        44     if n < 2:
+                            16:34:04.859819 line        45         return n
+                            16:34:04.859863 return      45         return n
+                            Return value:.. 0
+                            Elapsed time: 00:00:00.000268
+                        16:34:04.859990 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                        Return value:.. 1
+                        Elapsed time: 00:00:00.000980
+                        Starting var:.. n = 1
+                        16:34:04.860385 call        43 def fibo_rec(n):
+                        16:34:04.860722 line        44     if n < 2:
+                        16:34:04.860922 line        45         return n
+                        16:34:04.861000 return      45         return n
+                        Return value:.. 1
+                        Elapsed time: 00:00:00.000715
+                    16:34:04.861116 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                    Return value:.. 2
+                    Elapsed time: 00:00:00.002167
+                    Starting var:.. n = 2
+                    16:34:04.861242 call        43 def fibo_rec(n):
+                    16:34:04.861316 line        44     if n < 2:
+                    16:34:04.861362 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                        Starting var:.. n = 1
+                        16:34:04.861468 call        43 def fibo_rec(n):
+                        16:34:04.861557 line        44     if n < 2:
+                        16:34:04.861603 line        45         return n
+                        16:34:04.861667 return      45         return n
+                        Return value:.. 1
+                        Elapsed time: 00:00:00.000311
+                        Starting var:.. n = 0
+                        16:34:04.861806 call        43 def fibo_rec(n):
+                        16:34:04.861877 line        44     if n < 2:
+                        16:34:04.861922 line        45         return n
+                        16:34:04.861965 return      45         return n
+                        Return value:.. 0
+                        Elapsed time: 00:00:00.000237
+                    16:34:04.862078 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                    Return value:.. 1
+                    Elapsed time: 00:00:00.000915
+                16:34:04.862190 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                Return value:.. 3
+                Elapsed time: 00:00:00.003427
+            16:34:04.862302 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+            Return value:.. 8
+            Elapsed time: 00:00:00.008220
+        16:34:04.862414 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+        Return value:.. 21
+        Elapsed time: 00:00:00.027998
+        Starting var:.. n = 7
+        16:34:04.862537 call        43 def fibo_rec(n):
+        16:34:04.862608 line        44     if n < 2:
+        16:34:04.862676 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+            Starting var:.. n = 6
+            16:34:04.862745 call        43 def fibo_rec(n):
+            16:34:04.862816 line        44     if n < 2:
+            16:34:04.862861 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                Starting var:.. n = 5
+                16:34:04.862915 call        43 def fibo_rec(n):
+                16:34:04.862983 line        44     if n < 2:
+                16:34:04.863027 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                    Starting var:.. n = 4
+                    16:34:04.863082 call        43 def fibo_rec(n):
+                    16:34:04.863152 line        44     if n < 2:
+                    16:34:04.863196 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                        Starting var:.. n = 3
+                        16:34:04.863250 call        43 def fibo_rec(n):
+                        16:34:04.863319 line        44     if n < 2:
+                        16:34:04.863370 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                            Starting var:.. n = 2
+                            16:34:04.863425 call        43 def fibo_rec(n):
+                            16:34:04.863494 line        44     if n < 2:
+                            16:34:04.863538 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                                Starting var:.. n = 1
+                                16:34:04.863591 call        43 def fibo_rec(n):
+                                16:34:04.863708 line        44     if n < 2:
+                                16:34:04.863753 line        45         return n
+                                16:34:04.863796 return      45         return n
+                                Return value:.. 1
+                                Elapsed time: 00:00:00.000284
+                                Starting var:.. n = 0
+                                16:34:04.863921 call        43 def fibo_rec(n):
+                                16:34:04.864004 line        44     if n < 2:
+                                16:34:04.864059 line        45         return n
+                                16:34:04.864103 return      45         return n
+                                Return value:.. 0
+                                Elapsed time: 00:00:00.000260
+                            16:34:04.864215 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                            Return value:.. 1
+                            Elapsed time: 00:00:00.000884
+                            Starting var:.. n = 1
+                            16:34:04.864354 call        43 def fibo_rec(n):
+                            16:34:04.864429 line        44     if n < 2:
+                            16:34:04.864476 line        45         return n
+                            16:34:04.864532 return      45         return n
+                            Return value:.. 1
+                            Elapsed time: 00:00:00.000256
+                        16:34:04.864660 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                        Return value:.. 2
+                        Elapsed time: 00:00:00.001504
+                        Starting var:.. n = 2
+                        16:34:04.864797 call        43 def fibo_rec(n):
+                        16:34:04.864868 line        44     if n < 2:
+                        16:34:04.864912 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                            Starting var:.. n = 1
+                            16:34:04.864966 call        43 def fibo_rec(n):
+                            16:34:04.865049 line        44     if n < 2:
+                            16:34:04.865095 line        45         return n
+                            16:34:04.865140 return      45         return n
+                            Return value:.. 1
+                            Elapsed time: 00:00:00.000263
+                            Starting var:.. n = 0
+                            16:34:04.865274 call        43 def fibo_rec(n):
+                            16:34:04.865344 line        44     if n < 2:
+                            16:34:04.865388 line        45         return n
+                            16:34:04.865431 return      45         return n
+                            Return value:.. 0
+                            Elapsed time: 00:00:00.000235
+                        16:34:04.865542 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                        Return value:.. 1
+                        Elapsed time: 00:00:00.000854
+                    16:34:04.865730 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                    Return value:.. 3
+                    Elapsed time: 00:00:00.002754
+                    Starting var:.. n = 3
+                    16:34:04.865880 call        43 def fibo_rec(n):
+                    16:34:04.865952 line        44     if n < 2:
+                    16:34:04.865997 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                        Starting var:.. n = 2
+                        16:34:04.866058 call        43 def fibo_rec(n):
+                        16:34:04.866130 line        44     if n < 2:
+                        16:34:04.866174 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                            Starting var:.. n = 1
+                            16:34:04.866228 call        43 def fibo_rec(n):
+                            16:34:04.866297 line        44     if n < 2:
+                            16:34:04.866340 line        45         return n
+                            16:34:04.866383 return      45         return n
+                            Return value:.. 1
+                            Elapsed time: 00:00:00.000233
+                            Starting var:.. n = 0
+                            16:34:04.866505 call        43 def fibo_rec(n):
+                            16:34:04.866588 line        44     if n < 2:
+                            16:34:04.866635 line        45         return n
+                            16:34:04.866701 return      45         return n
+                            Return value:.. 0
+                            Elapsed time: 00:00:00.000275
+                        16:34:04.866813 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                        Return value:.. 1
+                        Elapsed time: 00:00:00.000835
+                        Starting var:.. n = 1
+                        16:34:04.866936 call        43 def fibo_rec(n):
+                        16:34:04.867008 line        44     if n < 2:
+                        16:34:04.867053 line        45         return n
+                        16:34:04.867097 return      45         return n
+                        Return value:.. 1
+                        Elapsed time: 00:00:00.000241
+                    16:34:04.867210 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                    Return value:.. 2
+                    Elapsed time: 00:00:00.001409
+                16:34:04.867322 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                Return value:.. 5
+                Elapsed time: 00:00:00.004488
+                Starting var:.. n = 4
+                16:34:04.867445 call        43 def fibo_rec(n):
+                16:34:04.867515 line        44     if n < 2:
+                16:34:04.867560 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                    Starting var:.. n = 3
+                    16:34:04.867614 call        43 def fibo_rec(n):
+                    16:34:04.867802 line        44     if n < 2:
+                    16:34:04.867901 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                        Starting var:.. n = 2
+                        16:34:04.868008 call        43 def fibo_rec(n):
+                        16:34:04.868082 line        44     if n < 2:
+                        16:34:04.868127 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                            Starting var:.. n = 1
+                            16:34:04.868182 call        43 def fibo_rec(n):
+                            16:34:04.868252 line        44     if n < 2:
+                            16:34:04.868296 line        45         return n
+                            16:34:04.868350 return      45         return n
+                            Return value:.. 1
+                            Elapsed time: 00:00:00.000249
+                            Starting var:.. n = 0
+                            16:34:04.868478 call        43 def fibo_rec(n):
+                            16:34:04.868548 line        44     if n < 2:
+                            16:34:04.868593 line        45         return n
+                            16:34:04.868636 return      45         return n
+                            Return value:.. 0
+                            Elapsed time: 00:00:00.000276
+                        16:34:04.868788 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                        Return value:.. 1
+                        Elapsed time: 00:00:00.000861
+                        Starting var:.. n = 1
+                        16:34:04.868918 call        43 def fibo_rec(n):
+                        16:34:04.868990 line        44     if n < 2:
+                        16:34:04.869034 line        45         return n
+                        16:34:04.869090 return      45         return n
+                        Return value:.. 1
+                        Elapsed time: 00:00:00.000263
+                    16:34:04.869214 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                    Return value:.. 2
+                    Elapsed time: 00:00:00.001679
+                    Starting var:.. n = 2
+                    16:34:04.869337 call        43 def fibo_rec(n):
+                    16:34:04.869408 line        44     if n < 2:
+                    16:34:04.869452 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                        Starting var:.. n = 1
+                        16:34:04.869506 call        43 def fibo_rec(n):
+                        16:34:04.869575 line        44     if n < 2:
+                        16:34:04.869619 line        45         return n
+                        16:34:04.869699 return      45         return n
+                        Return value:.. 1
+                        Elapsed time: 00:00:00.000273
+                        Starting var:.. n = 0
+                        16:34:04.869824 call        43 def fibo_rec(n):
+                        16:34:04.869894 line        44     if n < 2:
+                        16:34:04.869939 line        45         return n
+                        16:34:04.869984 return      45         return n
+                        Return value:.. 0
+                        Elapsed time: 00:00:00.000241
+                    16:34:04.870097 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                    Return value:.. 1
+                    Elapsed time: 00:00:00.000854
+                16:34:04.870273 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                Return value:.. 3
+                Elapsed time: 00:00:00.003044
+            16:34:04.870569 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+            Return value:.. 8
+            Elapsed time: 00:00:00.008047
+            Starting var:.. n = 5
+            16:34:04.870897 call        43 def fibo_rec(n):
+            16:34:04.871063 line        44     if n < 2:
+            16:34:04.871160 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                Starting var:.. n = 4
+                16:34:04.871316 call        43 def fibo_rec(n):
+                16:34:04.871533 line        44     if n < 2:
+                16:34:04.871714 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                    Starting var:.. n = 3
+                    16:34:04.871893 call        43 def fibo_rec(n):
+                    16:34:04.872062 line        44     if n < 2:
+                    16:34:04.872170 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                        Starting var:.. n = 2
+                        16:34:04.872296 call        43 def fibo_rec(n):
+                        16:34:04.872465 line        44     if n < 2:
+                        16:34:04.872569 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                            Starting var:.. n = 1
+                            16:34:04.872727 call        43 def fibo_rec(n):
+                            16:34:04.872961 line        44     if n < 2:
+                            16:34:04.873137 line        45         return n
+                            16:34:04.873256 return      45         return n
+                            Return value:.. 1
+                            Elapsed time: 00:00:00.000629
+                            Starting var:.. n = 0
+                            16:34:04.873401 call        43 def fibo_rec(n):
+                            16:34:04.873473 line        44     if n < 2:
+                            16:34:04.873519 line        45         return n
+                            16:34:04.873563 return      45         return n
+                            Return value:.. 0
+                            Elapsed time: 00:00:00.000271
+                        16:34:04.873723 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                        Return value:.. 1
+                        Elapsed time: 00:00:00.001509
+                        Starting var:.. n = 1
+                        16:34:04.873846 call        43 def fibo_rec(n):
+                        16:34:04.873917 line        44     if n < 2:
+                        16:34:04.873962 line        45         return n
+                        16:34:04.874006 return      45         return n
+                        Return value:.. 1
+                        Elapsed time: 00:00:00.000238
+                    16:34:04.874118 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                    Return value:.. 2
+                    Elapsed time: 00:00:00.002333
+                    Starting var:.. n = 2
+                    16:34:04.874265 call        43 def fibo_rec(n):
+                    16:34:04.874335 line        44     if n < 2:
+                    16:34:04.874379 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                        Starting var:.. n = 1
+                        16:34:04.874433 call        43 def fibo_rec(n):
+                        16:34:04.874503 line        44     if n < 2:
+                        16:34:04.874547 line        45         return n
+                        16:34:04.874590 return      45         return n
+                        Return value:.. 1
+                        Elapsed time: 00:00:00.000279
+                        Starting var:.. n = 0
+                        16:34:04.874757 call        43 def fibo_rec(n):
+                        16:34:04.874828 line        44     if n < 2:
+                        16:34:04.874872 line        45         return n
+                        16:34:04.874915 return      45         return n
+                        Return value:.. 0
+                        Elapsed time: 00:00:00.000236
+                    16:34:04.875026 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                    Return value:.. 1
+                    Elapsed time: 00:00:00.000840
+                16:34:04.875138 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                Return value:.. 3
+                Elapsed time: 00:00:00.003907
+                Starting var:.. n = 3
+                16:34:04.875260 call        43 def fibo_rec(n):
+                16:34:04.875331 line        44     if n < 2:
+                16:34:04.875376 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                    Starting var:.. n = 2
+                    16:34:04.875430 call        43 def fibo_rec(n):
+                    16:34:04.875499 line        44     if n < 2:
+                    16:34:04.875543 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                        Starting var:.. n = 1
+                        16:34:04.875597 call        43 def fibo_rec(n):
+                        16:34:04.875692 line        44     if n < 2:
+                        16:34:04.875785 line        45         return n
+                        16:34:04.875853 return      45         return n
+                        Return value:.. 1
+                        Elapsed time: 00:00:00.000335
+                        Starting var:.. n = 0
+                        16:34:04.875978 call        43 def fibo_rec(n):
+                        16:34:04.876049 line        44     if n < 2:
+                        16:34:04.876093 line        45         return n
+                        16:34:04.876136 return      45         return n
+                        Return value:.. 0
+                        Elapsed time: 00:00:00.000235
+                    16:34:04.876247 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                    Return value:.. 1
+                    Elapsed time: 00:00:00.000897
+                    Starting var:.. n = 1
+                    16:34:04.876369 call        43 def fibo_rec(n):
+                    16:34:04.876440 line        44     if n < 2:
+                    16:34:04.876490 line        45         return n
+                    16:34:04.876535 return      45         return n
+                    Return value:.. 1
+                    Elapsed time: 00:00:00.000246
+                16:34:04.876668 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                Return value:.. 2
+                Elapsed time: 00:00:00.001498
+            16:34:04.876815 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+            Return value:.. 5
+            Elapsed time: 00:00:00.006011
+        16:34:04.876939 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+        Return value:.. 13
+        Elapsed time: 00:00:00.014486
+    16:34:04.877069 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+    Return value:.. 34
+    Elapsed time: 00:00:00.043307
+    Starting var:.. n = 8
+    16:34:04.877200 call        43 def fibo_rec(n):
+    16:34:04.877276 line        44     if n < 2:
+    16:34:04.877323 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+        Starting var:.. n = 7
+        16:34:04.877380 call        43 def fibo_rec(n):
+        16:34:04.877471 line        44     if n < 2:
+        16:34:04.877516 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+            Starting var:.. n = 6
+            16:34:04.877570 call        43 def fibo_rec(n):
+            16:34:04.877639 line        44     if n < 2:
+            16:34:04.877720 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                Starting var:.. n = 5
+                16:34:04.877774 call        43 def fibo_rec(n):
+                16:34:04.877844 line        44     if n < 2:
+                16:34:04.877888 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                    Starting var:.. n = 4
+                    16:34:04.877942 call        43 def fibo_rec(n):
+                    16:34:04.878019 line        44     if n < 2:
+                    16:34:04.878124 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                        Starting var:.. n = 3
+                        16:34:04.878222 call        43 def fibo_rec(n):
+                        16:34:04.878306 line        44     if n < 2:
+                        16:34:04.878356 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                            Starting var:.. n = 2
+                            16:34:04.878415 call        43 def fibo_rec(n):
+                            16:34:04.878485 line        44     if n < 2:
+                            16:34:04.878530 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                                Starting var:.. n = 1
+                                16:34:04.878584 call        43 def fibo_rec(n):
+                                16:34:04.878699 line        44     if n < 2:
+                                16:34:04.878745 line        45         return n
+                                16:34:04.878788 return      45         return n
+                                Return value:.. 1
+                                Elapsed time: 00:00:00.000283
+                                Starting var:.. n = 0
+                                16:34:04.878913 call        43 def fibo_rec(n):
+                                16:34:04.878984 line        44     if n < 2:
+                                16:34:04.879029 line        45         return n
+                                16:34:04.879072 return      45         return n
+                                Return value:.. 0
+                                Elapsed time: 00:00:00.000236
+                            16:34:04.879184 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                            Return value:.. 1
+                            Elapsed time: 00:00:00.000876
+                            Starting var:.. n = 1
+                            16:34:04.879334 call        43 def fibo_rec(n):
+                            16:34:04.879405 line        44     if n < 2:
+                            16:34:04.879450 line        45         return n
+                            16:34:04.879502 return      45         return n
+                            Return value:.. 1
+                            Elapsed time: 00:00:00.000250
+                        16:34:04.879616 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                        Return value:.. 2
+                        Elapsed time: 00:00:00.001509
+                        Starting var:.. n = 2
+                        16:34:04.879775 call        43 def fibo_rec(n):
+                        16:34:04.879847 line        44     if n < 2:
+                        16:34:04.879892 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                            Starting var:.. n = 1
+                            16:34:04.879946 call        43 def fibo_rec(n):
+                            16:34:04.880016 line        44     if n < 2:
+                            16:34:04.880060 line        45         return n
+                            16:34:04.880104 return      45         return n
+                            Return value:.. 1
+                            Elapsed time: 00:00:00.000236
+                            Starting var:.. n = 0
+                            16:34:04.880244 call        43 def fibo_rec(n):
+                            16:34:04.880375 line        44     if n < 2:
+                            16:34:04.880421 line        45         return n
+                            16:34:04.880465 return      45         return n
+                            Return value:.. 0
+                            Elapsed time: 00:00:00.000300
+                        16:34:04.880577 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                        Return value:.. 1
+                        Elapsed time: 00:00:00.000901
+                    16:34:04.880722 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                    Return value:.. 3
+                    Elapsed time: 00:00:00.002860
+                    Starting var:.. n = 3
+                    16:34:04.880845 call        43 def fibo_rec(n):
+                    16:34:04.880917 line        44     if n < 2:
+                    16:34:04.880962 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                        Starting var:.. n = 2
+                        16:34:04.881017 call        43 def fibo_rec(n):
+                        16:34:04.881087 line        44     if n < 2:
+                        16:34:04.881132 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                            Starting var:.. n = 1
+                            16:34:04.881185 call        43 def fibo_rec(n):
+                            16:34:04.881254 line        44     if n < 2:
+                            16:34:04.881298 line        45         return n
+                            16:34:04.881341 return      45         return n
+                            Return value:.. 1
+                            Elapsed time: 00:00:00.000263
+                            Starting var:.. n = 0
+                            16:34:04.881540 call        43 def fibo_rec(n):
+                            16:34:04.881696 line        44     if n < 2:
+                            16:34:04.881746 line        45         return n
+                            16:34:04.881792 return      45         return n
+                            Return value:.. 0
+                            Elapsed time: 00:00:00.000338
+                        16:34:04.881911 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                        Return value:.. 1
+                        Elapsed time: 00:00:00.000974
+                        Starting var:.. n = 1
+                        16:34:04.882035 call        43 def fibo_rec(n):
+                        16:34:04.882107 line        44     if n < 2:
+                        16:34:04.882152 line        45         return n
+                        16:34:04.882197 return      45         return n
+                        Return value:.. 1
+                        Elapsed time: 00:00:00.000241
+                    16:34:04.882311 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                    Return value:.. 2
+                    Elapsed time: 00:00:00.001553
+                16:34:04.882432 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                Return value:.. 5
+                Elapsed time: 00:00:00.004739
+                Starting var:.. n = 4
+                16:34:04.882556 call        43 def fibo_rec(n):
+                16:34:04.882628 line        44     if n < 2:
+                16:34:04.882709 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                    Starting var:.. n = 3
+                    16:34:04.882766 call        43 def fibo_rec(n):
+                    16:34:04.882836 line        44     if n < 2:
+                    16:34:04.882881 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                        Starting var:.. n = 2
+                        16:34:04.882935 call        43 def fibo_rec(n):
+                        16:34:04.883005 line        44     if n < 2:
+                        16:34:04.883049 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                            Starting var:.. n = 1
+                            16:34:04.883103 call        43 def fibo_rec(n):
+                            16:34:04.883173 line        44     if n < 2:
+                            16:34:04.883217 line        45         return n
+                            16:34:04.883261 return      45         return n
+                            Return value:.. 1
+                            Elapsed time: 00:00:00.000236
+                            Starting var:.. n = 0
+                            16:34:04.883385 call        43 def fibo_rec(n):
+                            16:34:04.883455 line        44     if n < 2:
+                            16:34:04.883499 line        45         return n
+                            16:34:04.883543 return      45         return n
+                            Return value:.. 0
+                            Elapsed time: 00:00:00.000237
+                        16:34:04.883697 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                        Return value:.. 1
+                        Elapsed time: 00:00:00.000843
+                        Starting var:.. n = 1
+                        16:34:04.883822 call        43 def fibo_rec(n):
+                        16:34:04.883893 line        44     if n < 2:
+                        16:34:04.883937 line        45         return n
+                        16:34:04.883982 return      45         return n
+                        Return value:.. 1
+                        Elapsed time: 00:00:00.000237
+                    16:34:04.884093 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                    Return value:.. 2
+                    Elapsed time: 00:00:00.001406
+                    Starting var:.. n = 2
+                    16:34:04.884215 call        43 def fibo_rec(n):
+                    16:34:04.884286 line        44     if n < 2:
+                    16:34:04.884344 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                        Starting var:.. n = 1
+                        16:34:04.884411 call        43 def fibo_rec(n):
+                        16:34:04.884481 line        44     if n < 2:
+                        16:34:04.884525 line        45         return n
+                        16:34:04.884569 return      45         return n
+                        Return value:.. 1
+                        Elapsed time: 00:00:00.000254
+                        Starting var:.. n = 0
+                        16:34:04.884725 call        43 def fibo_rec(n):
+                        16:34:04.884796 line        44     if n < 2:
+                        16:34:04.884840 line        45         return n
+                        16:34:04.884884 return      45         return n
+                        Return value:.. 0
+                        Elapsed time: 00:00:00.000237
+                    16:34:04.884995 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                    Return value:.. 1
+                    Elapsed time: 00:00:00.000865
+                16:34:04.885114 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                Return value:.. 3
+                Elapsed time: 00:00:00.002638
+            16:34:04.885226 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+            Return value:.. 8
+            Elapsed time: 00:00:00.007735
+            Starting var:.. n = 5
+            16:34:04.885348 call        43 def fibo_rec(n):
+            16:34:04.885419 line        44     if n < 2:
+            16:34:04.885464 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                Starting var:.. n = 4
+                16:34:04.885518 call        43 def fibo_rec(n):
+                16:34:04.885587 line        44     if n < 2:
+                16:34:04.885632 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                    Starting var:.. n = 3
+                    16:34:04.885711 call        43 def fibo_rec(n):
+                    16:34:04.885792 line        44     if n < 2:
+                    16:34:04.885898 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                        Starting var:.. n = 2
+                        16:34:04.885978 call        43 def fibo_rec(n):
+                        16:34:04.886053 line        44     if n < 2:
+                        16:34:04.886098 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                            Starting var:.. n = 1
+                            16:34:04.886153 call        43 def fibo_rec(n):
+                            16:34:04.886224 line        44     if n < 2:
+                            16:34:04.886269 line        45         return n
+                            16:34:04.886313 return      45         return n
+                            Return value:.. 1
+                            Elapsed time: 00:00:00.000251
+                            Starting var:.. n = 0
+                            16:34:04.886464 call        43 def fibo_rec(n):
+                            16:34:04.886535 line        44     if n < 2:
+                            16:34:04.886605 line        45         return n
+                            16:34:04.886698 return      45         return n
+                            Return value:.. 0
+                            Elapsed time: 00:00:00.000355
+                        16:34:04.886875 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                        Return value:.. 1
+                        Elapsed time: 00:00:00.001046
+                        Starting var:.. n = 1
+                        16:34:04.887092 call        43 def fibo_rec(n):
+                        16:34:04.887202 line        44     if n < 2:
+                        16:34:04.887268 line        45         return n
+                        16:34:04.887333 return      45         return n
+                        Return value:.. 1
+                        Elapsed time: 00:00:00.000381
+                    16:34:04.887522 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                    Return value:.. 2
+                    Elapsed time: 00:00:00.001896
+                    Starting var:.. n = 2
+                    16:34:04.887701 call        43 def fibo_rec(n):
+                    16:34:04.887786 line        44     if n < 2:
+                    16:34:04.887857 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                        Starting var:.. n = 1
+                        16:34:04.887958 call        43 def fibo_rec(n):
+                        16:34:04.888042 line        44     if n < 2:
+                        16:34:04.888087 line        45         return n
+                        16:34:04.888132 return      45         return n
+                        Return value:.. 1
+                        Elapsed time: 00:00:00.000259
+                        Starting var:.. n = 0
+                        16:34:04.888317 call        43 def fibo_rec(n):
+                        16:34:04.888441 line        44     if n < 2:
+                        16:34:04.888488 line        45         return n
+                        16:34:04.888542 return      45         return n
+                        Return value:.. 0
+                        Elapsed time: 00:00:00.000309
+                    16:34:04.888694 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                    Return value:.. 1
+                    Elapsed time: 00:00:00.001086
+                16:34:04.888821 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                Return value:.. 3
+                Elapsed time: 00:00:00.003384
+                Starting var:.. n = 3
+                16:34:04.888947 call        43 def fibo_rec(n):
+                16:34:04.889020 line        44     if n < 2:
+                16:34:04.889066 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                    Starting var:.. n = 2
+                    16:34:04.889122 call        43 def fibo_rec(n):
+                    16:34:04.889194 line        44     if n < 2:
+                    16:34:04.889239 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                        Starting var:.. n = 1
+                        16:34:04.889293 call        43 def fibo_rec(n):
+                        16:34:04.889363 line        44     if n < 2:
+                        16:34:04.889421 line        45         return n
+                        16:34:04.889467 return      45         return n
+                        Return value:.. 1
+                        Elapsed time: 00:00:00.000258
+                        Starting var:.. n = 0
+                        16:34:04.889597 call        43 def fibo_rec(n):
+                        16:34:04.889693 line        44     if n < 2:
+                        16:34:04.889739 line        45         return n
+                        16:34:04.889783 return      45         return n
+                        Return value:.. 0
+                        Elapsed time: 00:00:00.000264
+                    16:34:04.889895 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                    Return value:.. 1
+                    Elapsed time: 00:00:00.000852
+                    Starting var:.. n = 1
+                    16:34:04.890017 call        43 def fibo_rec(n):
+                    16:34:04.890088 line        44     if n < 2:
+                    16:34:04.890134 line        45         return n
+                    16:34:04.890178 return      45         return n
+                    Return value:.. 1
+                    Elapsed time: 00:00:00.000240
+                16:34:04.890290 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                Return value:.. 2
+                Elapsed time: 00:00:00.001423
+            16:34:04.890403 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+            Return value:.. 5
+            Elapsed time: 00:00:00.005134
+        16:34:04.890515 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+        Return value:.. 13
+        Elapsed time: 00:00:00.013215
+        Starting var:.. n = 6
+        16:34:04.890636 call        43 def fibo_rec(n):
+        16:34:04.890743 line        44     if n < 2:
+        16:34:04.890788 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+            Starting var:.. n = 5
+            16:34:04.890843 call        43 def fibo_rec(n):
+            16:34:04.890913 line        44     if n < 2:
+            16:34:04.890957 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                Starting var:.. n = 4
+                16:34:04.891010 call        43 def fibo_rec(n):
+                16:34:04.891079 line        44     if n < 2:
+                16:34:04.891123 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                    Starting var:.. n = 3
+                    16:34:04.891178 call        43 def fibo_rec(n):
+                    16:34:04.891247 line        44     if n < 2:
+                    16:34:04.891291 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                        Starting var:.. n = 2
+                        16:34:04.891344 call        43 def fibo_rec(n):
+                        16:34:04.891419 line        44     if n < 2:
+                        16:34:04.891464 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                            Starting var:.. n = 1
+                            16:34:04.891530 call        43 def fibo_rec(n):
+                            16:34:04.891626 line        44     if n < 2:
+                            16:34:04.891702 line        45         return n
+                            16:34:04.891747 return      45         return n
+                            Return value:.. 1
+                            Elapsed time: 00:00:00.000298
+                            Starting var:.. n = 0
+                            16:34:04.891871 call        43 def fibo_rec(n):
+                            16:34:04.891941 line        44     if n < 2:
+                            16:34:04.891986 line        45         return n
+                            16:34:04.892029 return      45         return n
+                            Return value:.. 0
+                            Elapsed time: 00:00:00.000236
+                        16:34:04.892142 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                        Return value:.. 1
+                        Elapsed time: 00:00:00.000877
+                        Starting var:.. n = 1
+                        16:34:04.892264 call        43 def fibo_rec(n):
+                        16:34:04.892336 line        44     if n < 2:
+                        16:34:04.892381 line        45         return n
+                        16:34:04.892425 return      45         return n
+                        Return value:.. 1
+                        Elapsed time: 00:00:00.000238
+                    16:34:04.892536 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                    Return value:.. 2
+                    Elapsed time: 00:00:00.001437
+                    Starting var:.. n = 2
+                    16:34:04.892675 call        43 def fibo_rec(n):
+                    16:34:04.892759 line        44     if n < 2:
+                    16:34:04.892804 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                        Starting var:.. n = 1
+                        16:34:04.892858 call        43 def fibo_rec(n):
+                        16:34:04.892928 line        44     if n < 2:
+                        16:34:04.892972 line        45         return n
+                        16:34:04.893016 return      45         return n
+                        Return value:.. 1
+                        Elapsed time: 00:00:00.000236
+                        Starting var:.. n = 0
+                        16:34:04.893139 call        43 def fibo_rec(n):
+                        16:34:04.893210 line        44     if n < 2:
+                        16:34:04.893254 line        45         return n
+                        16:34:04.893299 return      45         return n
+                        Return value:.. 0
+                        Elapsed time: 00:00:00.000275
+                    16:34:04.893458 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                    Return value:.. 1
+                    Elapsed time: 00:00:00.000865
+                16:34:04.893572 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                Return value:.. 3
+                Elapsed time: 00:00:00.002660
+                Starting var:.. n = 3
+                16:34:04.893729 call        43 def fibo_rec(n):
+                16:34:04.893801 line        44     if n < 2:
+                16:34:04.893845 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                    Starting var:.. n = 2
+                    16:34:04.893899 call        43 def fibo_rec(n):
+                    16:34:04.893969 line        44     if n < 2:
+                    16:34:04.894013 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                        Starting var:.. n = 1
+                        16:34:04.894067 call        43 def fibo_rec(n):
+                        16:34:04.894137 line        44     if n < 2:
+                        16:34:04.894186 line        45         return n
+                        16:34:04.894231 return      45         return n
+                        Return value:.. 1
+                        Elapsed time: 00:00:00.000242
+                        Starting var:.. n = 0
+                        16:34:04.894352 call        43 def fibo_rec(n):
+                        16:34:04.894422 line        44     if n < 2:
+                        16:34:04.894466 line        45         return n
+                        16:34:04.894509 return      45         return n
+                        Return value:.. 0
+                        Elapsed time: 00:00:00.000236
+                    16:34:04.894620 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                    Return value:.. 1
+                    Elapsed time: 00:00:00.000833
+                    Starting var:.. n = 1
+                    16:34:04.894774 call        43 def fibo_rec(n):
+                    16:34:04.894845 line        44     if n < 2:
+                    16:34:04.894889 line        45         return n
+                    16:34:04.894933 return      45         return n
+                    Return value:.. 1
+                    Elapsed time: 00:00:00.000237
+                16:34:04.895044 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                Return value:.. 2
+                Elapsed time: 00:00:00.001395
+            16:34:04.895156 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+            Return value:.. 5
+            Elapsed time: 00:00:00.004392
+            Starting var:.. n = 4
+            16:34:04.895277 call        43 def fibo_rec(n):
+            16:34:04.895346 line        44     if n < 2:
+            16:34:04.895390 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                Starting var:.. n = 3
+                16:34:04.895457 call        43 def fibo_rec(n):
+                16:34:04.895576 line        44     if n < 2:
+                16:34:04.895627 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                    Starting var:.. n = 2
+                    16:34:04.895713 call        43 def fibo_rec(n):
+                    16:34:04.895784 line        44     if n < 2:
+                    16:34:04.895828 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                        Starting var:.. n = 1
+                        16:34:04.895916 call        43 def fibo_rec(n):
+                        16:34:04.896034 line        44     if n < 2:
+                        16:34:04.896079 line        45         return n
+                        16:34:04.896124 return      45         return n
+                        Return value:.. 1
+                        Elapsed time: 00:00:00.000301
+                        Starting var:.. n = 0
+                        16:34:04.896248 call        43 def fibo_rec(n):
+                        16:34:04.896318 line        44     if n < 2:
+                        16:34:04.896362 line        45         return n
+                        16:34:04.896405 return      45         return n
+                        Return value:.. 0
+                        Elapsed time: 00:00:00.000234
+                    16:34:04.896516 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                    Return value:.. 1
+                    Elapsed time: 00:00:00.000887
+                    Starting var:.. n = 1
+                    16:34:04.896681 call        43 def fibo_rec(n):
+                    16:34:04.896760 line        44     if n < 2:
+                    16:34:04.896816 line        45         return n
+                    16:34:04.896860 return      45         return n
+                    Return value:.. 1
+                    Elapsed time: 00:00:00.000259
+                16:34:04.896973 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                Return value:.. 2
+                Elapsed time: 00:00:00.001596
+                Starting var:.. n = 2
+                16:34:04.897096 call        43 def fibo_rec(n):
+                16:34:04.897167 line        44     if n < 2:
+                16:34:04.897218 line        46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                    Starting var:.. n = 1
+                    16:34:04.897274 call        43 def fibo_rec(n):
+                    16:34:04.897345 line        44     if n < 2:
+                    16:34:04.897389 line        45         return n
+                    16:34:04.897432 return      45         return n
+                    Return value:.. 1
+                    Elapsed time: 00:00:00.000253
+                    Starting var:.. n = 0
+                    16:34:04.897573 call        43 def fibo_rec(n):
+                    16:34:04.897716 line        44     if n < 2:
+                    16:34:04.897790 line        45         return n
+                    16:34:04.897839 return      45         return n
+                    Return value:.. 0
+                    Elapsed time: 00:00:00.000350
+                16:34:04.897958 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+                Return value:.. 1
+                Elapsed time: 00:00:00.000943
+            16:34:04.898073 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+            Return value:.. 3
+            Elapsed time: 00:00:00.002877
+        16:34:04.898187 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+        Return value:.. 8
+        Elapsed time: 00:00:00.007631
+    16:34:04.898300 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+    Return value:.. 21
+    Elapsed time: 00:00:00.021180
+16:34:04.898412 return      46     return fibo_rec(n - 1) + fibo_rec(n - 2)
+Return value:.. 55
+Elapsed time: 00:00:00.065421

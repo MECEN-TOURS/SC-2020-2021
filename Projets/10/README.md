@@ -1,41 +1,38 @@
-# Sujet 10
+# Sujet 12
 
-Une nourriture est fabriquée en raffinant des huiles brutes et en les mélangeant.
-Ces huiles brutes sont de plusieurs types:
+Une companie minière va continuer ses opérations dans un certaine zone pour les 5 prochaines années.
+Elle possède 4 mines mais ne peut en opérer que 3 par an.
+Même si une mine n'est pas travaillée un an elle doit rester "ouverte" au sens ou des taxes sont dûes pour pouvoir être opérée une année ultérieure.
+Les taxes sont de 
+- Mine1 : 5Meuros
+- Mine2 : 4Meuros
+- Mine3 : 4 Meuros
+- Mine4 : 5 Meuros
 
-- Végétales: `VEG1` et `VEG2`
-- Non végétales: `HUI1`, `HUI2` et `HUI3`
+Il y a une limite à la quantité de minerai que l'on peut extraire par an
 
-Chacune de ces huiles peut être obtenue pour une livraison immédiate (Janvier) ou acheter sur un marché à terme pour une livraison lors des mois suivant.
-Les tarifs futurs sont fourni dans la table
+- Mine1 : 2Mtonnes
+- Mine2 : 2.5Mtonnes
+- Mine3 : 1.3 Mtonnes
+- Mine4 : 3Mtonnes
 
-| Mois    | VEG1 | VEG2 | HUI1 | HUI2 | HUI3 |
-| ----    | ---- | ---- | ---- | ---- | ---- |
-| Janvier | 110  | 120  | 130  | 110  | 115  |
-| Février | 130  | 130  | 110  | 90   | 115  |
-| Mars    | 110  | 140  | 130  | 100  | 95   |
-| Avril   | 120  | 110  | 120  | 120  | 125  |
-| Mai     | 100  | 120  | 150  | 110  | 105  |
-| Juin    | 90   | 100  | 140  | 80   | 135  |
+Le minerai des différentes mines est de qualité différente.
+Cette qualité se mesure sur une échelle qui se compose linéairement lors des mélanges de minerais
+
+- Mine1 : 1.0
+- Mine2 : 0.7
+- Mine3 : 1.5
+- Mine4 : 0.5
 
 
-Le produit final se vent à 150 euros la tonne.
+Chaque année on doit mélanger les minerais des différentes mines pour obtenir un résultat de qualité donnée:
+- Année 1 : 0.9
+- Année 2 : 0.8
+- Année 3 : 1.2
+- Année 4 : 0.6
+- Année 5 : 1.0
 
-Les huiles végétales et non végétales utilisent des lignes de production distinctes.
-Il n'est pas possible de rafiner plus de 200 tonnes d'huiles végétales par mois et 250 tonnes pour les huiles non végétales.
-Il n'y a pas de deperdition de poids durant le rafinnement et le prix de celui-ci peut être négligé.
 
-On peut stocker jusqu'à 1000 tonnes de chaque type d'huile.
-Le cout de stockage est de 5 euros par tonne par mois.
-Le produit final et les huiles rafinnées ne peuvent être stockées.
-
-La dureté des huiles se mélange linéairement avec
-- `VEG1` : 8.8
-- `VEG2` : 6.1
-- `HUI1` : 2.0
-- `HUI2` : 4.2
-- `HUI3` : 5.0
-
-et le résultat final doit avoir une dureté entre 3 et 6.
-
-Comment peut-on optimiser le bénéfice?
+Le produit final est vendu à 10 euros la tonne. 
+Les revenues et les dépenses dont face à une inflation de 10% par an.
+Comment doit-on opérer ces mines?
